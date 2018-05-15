@@ -1,0 +1,5 @@
+# Jekyll related files
+
+_site/
+.sass-cache/
+.jekyll-metadata
