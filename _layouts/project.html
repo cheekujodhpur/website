@@ -7,6 +7,7 @@ layout: default
     <div class="inner">
         <h2>{{ page.title }}</h2>
         <h3>{{ page.subtitle }}</h3>
+        <p><em>{{ page.date | date: "%-d %B %Y" }}</em></p>
         {{ content }}
     </div>
   </section>
