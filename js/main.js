@@ -97,4 +97,8 @@
 
 	});
 
+    (function () {
+        handleLinks()
+    })();
+
 })(jQuery);
