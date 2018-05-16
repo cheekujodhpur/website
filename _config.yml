@@ -21,6 +21,7 @@ include: ['_pages']
 exclude: ['spectral']
 kramdown:
   input: GFM
+  parse_block_html: true
 collections:
   projects:
     output: true
