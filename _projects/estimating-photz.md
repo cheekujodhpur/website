@@ -3,7 +3,7 @@ layout: project
 title:  "Estimating Photometric Redshifts using Machine Learning Techniques"
 subtitle: "A recurring problem"
 date:   2012-12-25 17:34:22
-categories: projects machine-learning astronomy
+categories: machine-learning astronomy
 image: /media/nius-2012.png
 weight: 100
 ---
