@@ -2,7 +2,7 @@
 title: Kumar Ayush
 email: cheekujodhpur@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is the official website for Kumar Ayush.
+  This is the official website of Kumar Ayush.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "kumarayush.com" # the base hostname & protocol for your site
