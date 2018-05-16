@@ -1,0 +1,17 @@
+---
+layout: projects
+title: Projects
+permalink: /projects/
+---
+
+{% for project in site.projects %}
+<section class="spotlight">
+    <div class="image"><img src="{{ project.image }}" alt="" /></div>
+    <div class="content">
+        <h2>{{ project.title }}</h2>
+        {{ project.content | split:'<!--break-->' | first  }}
+        <p><a href="{{ project.url }}">Read More</a></p>
+    </div>
+</section>
+{% endfor %}
+

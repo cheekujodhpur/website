@@ -21,9 +21,9 @@ include: ['_pages']
 exclude: ['spectral']
 kramdown:
   input: GFM
-# collections:
-#   soc_projects:
-#     output: true
+collections:
+  projects:
+    output: true
 #   showcase_projects:
 #     output: true
 #   events:
