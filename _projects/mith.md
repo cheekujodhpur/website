@@ -3,7 +3,7 @@ layout: project
 title:  "Hawaiian Treasure Hunt"
 subtitle: "Mood Indigo 2015"
 date:   2017-05-18 11:39:00
-categories: creative puzzle
+categories: creative puzzle gaming
 image: /media/mith/rules.png
 weight: 210
 ---
