@@ -22,3 +22,4 @@ weight: 110
         <div class="6u"><span class="image fit"><img src="/media/ipho-3.png" alt="" /></span></div>
     </div>
 </div>
+<p>Thanks to <em>Sandesh Kalantre</em>, <em>Sharad Mirani</em> and <em>Alankar Kotwal</em> for working with me on this project, and <em>Prof. Aniket Sule</em> and <em>Prof. Anwesh Mazumdar</em> for their guidance.</p>

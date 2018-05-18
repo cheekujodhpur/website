@@ -38,3 +38,4 @@ weight: 210
         <div class="4u"><span class="image fit"><img src="/media/mith/28.jpg" alt="" /></span></div>
     </div>
 </div>
+<p>In addition to people credited above, Thanks to <em>Sandesh Kalantre</em> for working with me on this project, and <em>Pratik Lodha</em> and <em>Harshit Manocha</em> for their guidance.</p>

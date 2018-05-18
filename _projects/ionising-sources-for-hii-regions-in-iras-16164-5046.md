@@ -23,3 +23,4 @@ from this project are aiming for a publication from the results.</i> However, yo
         <div class="12u"><span class="image fit"><img src="/media/1280Full_bb.png" alt="" /></span></div>
     </div>
 </div>
+<p>Thanks to <em>Vedant Shenoy</em>, <em>Yash Mehta</em> and <em>Anoop Gavankar</em> for working with me on this project, and <em>Prof. Sarita Vig</em> for her guidance.</p>

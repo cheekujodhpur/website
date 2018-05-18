@@ -14,5 +14,6 @@ weight: 106
 <!--break-->
 <p><span class="image right"><img src="/media/king-elevator.png" alt="" /></span>Now, what we did is note the time it takes to travel between any two floors and fit a straight line to the time versus number of floors covered. We were not smart enough to label the graph. The x-axis represents the number of floors and the y-axis represents the time in seconds. Very approximately, the number of seconds minus eight, multiplied by four and divided by 10 will give you the number of floors covered. You can check out the details in our "paper".</p>
 <p>By the time we finished this analysis, however, the lift display had been repaired.</p>
+<p>Thanks to <em>Sandesh Kalantre</em> for working with me on this project.</p>
 
 [^1]: A fantasy book set in the world of the Lord of the Rings series, both by Lord J.R.R. Tolkien.

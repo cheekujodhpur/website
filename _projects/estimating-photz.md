@@ -20,5 +20,6 @@ I revisited the problem in 2016 with my friend [Kalpesh Krishna](http://martians
 <!--break-->
 <p>
 The third visit was paid in the form of a course project for a Galactic Astrophysics course at IITB (PH 426) taken by Prof. Vikram Rentala. Our project mentor was Prof. Yogesh Wadadekar from NCRA (TIFR), Pune. This time, we combine the spectroscopic data from PRIMUS and VIPERS survey for high redshift galaxies, and obtain photometric data from SDSS for these galaxies to create a dataset which is presented in contrast to using the spectroscopic redshifts from SDSS itself, which is known to be accurate limited to lower redshift regimes.  The performance for these two datasets are compared for the two methods of ANNs and K-NN as earlier. The full report can be seen [here](/media/photz_ph426.pdf).</p>
+<p>Thanks to <em>Kalpesh Krishna</em>, <em>Sheshansh Agrawal</em>, <em>Piyush Bhatore</em>, <em>Abhay Singh</em>, <em>Alankar Kotwal</em>, <em>Abhijith Varma</em>, <em>Prashansa Gupta</em>, <em>Abhinav Chikhalkar</em> for working with me on this project, and <em>Prof. Ninan Sajeeth Philip</em>, <em>Prof. Yogesh Wadadekar</em> and <em>Prof. Vikram Rentala</em> for their guidance.</p>
 
 [^1]: [SDSS](https://www.sdss.org) stands for Sloan Digital Sky Survey. DRxx is Data Release and version.
