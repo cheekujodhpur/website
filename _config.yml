@@ -25,6 +25,8 @@ kramdown:
 collections:
   projects:
     output: true
+  bposts:
+    output: true
 #   showcase_projects:
 #     output: true
 #   events:

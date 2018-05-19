@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article id="main">
+
+  <section class="wrapper style5">
+    <div class="inner">
+        <h2>{{ page.title }}</h2>
+        <h3>{{ page.subtitle }}</h3>
+        <p><em>{{ page.date | date: "%-d %B %Y" }}</em></p>
+        {{ content }}
+    </div>
+  </section>
+
+</article>

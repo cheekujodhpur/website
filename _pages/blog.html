@@ -1,0 +1,11 @@
+---
+layout: blogs
+title: Blog
+permalink: /blog/
+---
+
+<ul>
+{% for post in site.bposts %}
+<li>{{post.title}}...<a href="{{ post.url }}">Read</a></li>
+{% endfor %}
+</ul>
