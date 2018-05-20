@@ -534,6 +534,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
             @include breakpoint(medium) {
                 max-width:100% !important;
+                margin:0 0 2em 0 !important;
             }
 
 			img {
