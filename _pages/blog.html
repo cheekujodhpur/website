@@ -4,8 +4,32 @@ title: Blog
 permalink: /blog/
 ---
 
-<ul>
-{% for post in site.bposts %}
-<li>{{post.title}}...<a href="{{ post.url }}">Read</a></li>
-{% endfor %}
-</ul>
+{% assign bposts = site.bposts %}
+
+<section>
+<div class="row">
+    <div class="6u 12u$(medium)">
+        {% for bpost in bposts %}
+        {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == 1 %}
+        <header>
+            <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
+            <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+        </header>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="6u 12u$(medium)">
+        {% for bpost in bposts %}
+        {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == 0 %}
+        <header>
+            <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
+            <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+        </header>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</section>

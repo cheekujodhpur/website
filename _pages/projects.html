@@ -5,14 +5,31 @@ permalink: /projects/
 ---
 
 {% assign projects = site.projects | sort:"weight" | reverse %}
-{% for project in projects %}
-<section class="spotlight">
-    <div class="image"><img src="{{ project.image }}" alt="" /></div>
-    <div class="content">
-        <h2>{{ project.title }}</h2>
-        {{ project.content | split:'<!--break-->' | first  }}
-        <p><a href="{{ project.url }}">Read More</a></p>
-    </div>
-</section>
-{% endfor %}
 
+<section>
+<div class="row">
+    <div class="6u 12u$(medium)">
+        {% for project in projects %}
+        {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == 1 %}
+        <header>
+            <h5><a href="{{ project.url }}">{{ project.title }}</a></h5>
+            <p><i>{{ project.date | date: "%B %Y" }}</i> - {{ project.subtitle }}</p>
+        </header>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="6u 12u$(medium)">
+        {% for project in projects %}
+        {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == 0 %}
+        <header>
+            <h5><a href="{{ project.url }}">{{ project.title }}</a></h5>
+            <p><i>{{ project.date | date: "%B %Y" }}</i> - {{ project.subtitle }}</p>
+        </header>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</section>
