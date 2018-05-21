@@ -3,7 +3,6 @@ layout: blog
 title:  "Witcher, Game of Thrones and Predestination: Inspirations from Irish Mythology"
 date:   2016-06-18 07:26:00
 categories: literature pop
-weight: 4
 ---
 
 <p>
