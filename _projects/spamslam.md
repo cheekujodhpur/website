@@ -15,4 +15,4 @@ weight: 501
 <p>There is one major challenge. How do you shift our civilisation to work on this model from the current one? This, we do have no clear answer for, and if we did, we would be off implementing that. Apart from this, we spent a long time thinking of other loopholes with the plan and we were able to shoot down everything that we did come up with. As part of the hackathon prize, we also won office hours with YCombinator, who also did not see more problems with the idea than the one which I've already highlighted. I would be delighted to have more discussion on this if you wish and are welcome to write back to me.</p>
 <!--break-->
 <p>You can find the full presentation [here](https://docs.google.com/presentation/d/1LyB7FIreNDG_ZRDsNl7fjjUXJ677j5QnkOnhnrFXEBo/edit?usp=sharing).</p>
-<p>Thanks to <em>Akash Trehan</em> and <em>Kumar Ashutosh</em> for working with me on this project.</p>
+<p>Thanks to <em>[Akash Trehan](https://www.akashtrehan.com/)</em> and <em>Kumar Ashutosh</em> for working with me on this project.</p>
