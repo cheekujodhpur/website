@@ -8,17 +8,18 @@ description_small: turns dreams into reality.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "kumarayush.com" # the base hostname & protocol for your site
-twitter: https://twitter.com/kumarayush4ever
-github: https://github.com/cheekujodhpur
-linkedin-square: https://linkedin.com/in/cheekujodhpur
-facebook-official: https://facebook.com/cheekujodhpur
-google-plus-square: https://plus.google.com/u/0/+cheekujodhpur
+social:
+    twitter: https://twitter.com/kumarayush4ever
+    github: https://github.com/cheekujodhpur
+    linkedin-square: https://linkedin.com/in/cheekujodhpur
+    facebook-official: https://facebook.com/cheekujodhpur
+    google-plus-square: https://plus.google.com/u/0/+cheekujodhpur
 
 # Build Settings
 sass:
   sass_dir: _sass
 include: ['_pages']
-exclude: ['spectral']
+exclude: ['spectral','_pages/elements.html', '_pages/generic.html']
 kramdown:
   input: GFM
   parse_block_html: true
