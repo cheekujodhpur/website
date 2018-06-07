@@ -12,10 +12,17 @@ permalink: /blog/
         {% for bpost in bposts %}
         {% assign mod = forloop.index | modulo: 2 %}
         {% if mod == 1 %}
-        <header>
-            <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
-            <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-        </header>
+            {% if bpost.exturl %}
+            <header>
+                <h5><a href="{{ bpost.exturl }}">{{ bpost.title }}</a></h5>
+                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+            </header>
+            {% else %}
+            <header>
+                <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
+                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+            </header>
+            {% endif %}
         {% endif %}
         {% endfor %}
     </div>
@@ -24,10 +31,17 @@ permalink: /blog/
         {% for bpost in bposts %}
         {% assign mod = forloop.index | modulo: 2 %}
         {% if mod == 0 %}
-        <header>
-            <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
-            <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-        </header>
+            {% if bpost.exturl %}
+            <header>
+                <h5><a href="{{ bpost.exturl }}">{{ bpost.title }}</a></h5>
+                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+            </header>
+            {% else %}
+            <header>
+                <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
+                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+            </header>
+            {% endif %}
         {% endif %}
         {% endfor %}
     </div>
