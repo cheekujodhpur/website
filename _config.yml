@@ -19,7 +19,7 @@ social:
 sass:
   sass_dir: _sass
 include: ['_pages']
-exclude: ['spectral','_pages/elements.html', '_pages/generic.html']
+exclude: ['Gemfile', 'Gemfile.lock', 'Makefile', 'spectral','_pages/elements.html', '_pages/generic.html']
 kramdown:
   input: GFM
   parse_block_html: true
