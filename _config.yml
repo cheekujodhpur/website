@@ -32,3 +32,5 @@ collections:
 #   events:
 #     output: true
 
+timezone: Asia/Calcutta
+future: true
