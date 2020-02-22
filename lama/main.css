@@ -1,0 +1,90 @@
+.l-menu {
+    margin-top: 20vh;
+    margin-bottom: 2vh;
+}
+
+.list-group {
+    display: inline-block !important;
+}
+
+.l-cards {
+    display: flex;
+    list-style: none;
+}
+
+.l-cards li {
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+    -webkit-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    background-image: linear-gradient(to right, red, #fff);
+    padding: 5px;
+
+    font:50px Georgia, Times New Roman, serif;
+}
+
+#l-discard li:nth-child(n+2) {
+    margin-left:-120px;
+}
+
+#l-hand li:nth-child(n+2) {
+    margin-left:-70px;
+}
+
+#l-hand li:hover {
+    transition: transform 0.2s ease-in;
+
+    transform: scale(1.02) translateY(-4px);
+    -webkit-transition: scale(1.02) translateY(-4px);
+    -moz-transition: scale(1.02) translateY(-4px);
+    -o-transition: scale(1.02) translateY(-4px);
+}
+
+.l-player-name {
+    text-decoration: underline;
+}
+
+#l-lobby-log-container {
+    font-size: 0.88rem;
+}
+
+#l-sidebar {
+    min-height:100vh;
+    margin-left: -15rem;
+    width: 15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#l-sidebar.toggled {
+    margin-left: 0;
+}
+
+#l-game-container {
+    width: 100%;
+    padding:0px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#l-game-content-container {
+    max-width: 97vw;
+}
+
+@media (min-width: 768px) {
+    #l-sidebar {
+        margin-left: 0;
+    }
+
+    #l-game-content-container {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #l-sidebar-toggle {
+        display: none;
+    }
+}

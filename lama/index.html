@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shring-to-fit=yes">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Custom -->
+        <link rel="stylesheet" href="./main.css">
+
+        <title>L.A.M.A.</title>
+    </head>
+    <body>
+        <!-- alias entry container BEGIN -->
+        <div id="l-alias-container" class="l-menu container d-none">
+            <div class="row justify-content-center">
+                <div class="mx-auto">
+                    <form id="l-alias-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="l-alias" placeholder="Enter alias">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Enter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- alias entry container END -->
+        <!-- super menu container BEGIN -->
+        <div id="l-menu-container" class="l-menu container d-none">
+            <div class="row justify-content-center">
+                <div class="mx-auto">
+                    <form id="l-menu-form">
+                        <div id="l-menu-buttons" class="input-group text-center p-3">
+                            <input type="text" id="l-join-game-id" maxlength="5" class="form-control" placeholder="Game ID">
+                            <div class="input-group-append">
+                                <button type="submit" id="l-join-button" class="btn btn-secondary">Join Lobby</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <button type="button" id="l-create-button" class="btn btn-primary">Create Lobby</button>
+            </div>
+        </div>
+        <!-- super menu container END -->
+        <!-- main game container BEGIN -->
+        <div id="l-game-container" class="l-menu d-none">
+            <div class="d-flex">
+                <div id="l-sidebar" class="border-right pr-3 toggled">
+                    <div class="row justify-content-center">
+                        <div class="text-center mx-auto p-3">
+                            <h4>Members</h4>
+                            <ul class="list-group md-3" id="l-lobby-members">
+                            </ul>
+                            <p id="l-lobby-message-container"></p>
+                            <p id="l-lobby-log-container"></p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="button" id="l-start-game-button" class="btn btn-primary d-none">Start Game</button>
+                    </div>
+                </div>
+                <div class="d-none px-3" id="l-game-content-container">
+                    <ul id="l-discard" class="l-cards"></ul>
+                    <ul id="l-hand" class="l-cards"></ul>
+                </div>
+            </div>
+        </div>
+        <!-- main game container END -->
+        <div id="l-topbar" class="p-2 d-inline-flex justify-content-between fixed-top bg-light">
+            <div>
+                <button id="l-sidebar-toggle" class="btn btn-sm bg-dark">
+                    <span class="text-white">Menu</span>
+                </button>
+                <span id="l-topbar-info"></span>
+                <button onclick="pushInput('Draw')" class="btn btn-sm btn-success">Draw</button>
+                <button onclick="pushInput('Fold')" class="btn btn-sm btn-warning">Fold</button>
+            </div>
+            <form id="l-clear-form">
+                <button type="submit" class="btn btn-sm btn-danger">Clear Data</button>
+            </form>
+        </div>
+
+        <!-- JS -->
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-xmlrpc/0.4.3/jquery.xmlrpc.js" integrity="sha256-drJeWSPQ0DcDSP+N0EEmzEkOdI0uOCgGO6zwwNkLbhg=" crossorigin="anonymous"></script>
+        <!-- Custom -->
+        <script type="text/javascript" src="./main.js"></script>
+        <script type="text/javascript" src="./lama.js"></script>
+    </body>
+</html>
