@@ -2,7 +2,7 @@
 layout: blog
 title:  "Die Gstettensaga: The Rise of Echsenfriedl - Film Commentary"
 date:   2020-01-19 17:06:07
-categories: musings
+categories: musings review
 ---
 In this post, I am going to comment on "Die Gstettensaga: The Rise of Echsenfriedl". I will definitely steer away from any explicit spoilers and try my best to avoid any implicit ones. I want you to watch this. If your usual cup of tea is pop cinema, this would be an experience. It is an Austrian indie film. It is [available on YouTube](https://www.youtube.com/watch?v=qjEzckLBazY) with subtitles which form an essential part of the story. Please do not ask me how I came about this.
 
