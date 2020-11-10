@@ -1,7 +1,7 @@
 var game_status_poller = null;
 
-//var purl = 'http://localhost:1144';
-var purl = 'https://llama.kumar-ayush.com';
+var purl = 'http://localhost:1144';
+//var purl = 'https://llama.kumar-ayush.com';
 
 var stateMap = {
     'none': lobbyWaitHandler,
@@ -148,18 +148,17 @@ function stateHandler(data) {
 
 function renderCard(card, count, playable=false) {
     var card_image_name = imageMap[card];
-    bgStyle = 'style="background-image: url(\'/client/img/' + card_image_name + '.png\'); background-size: cover"'; 
     if (count === undefined) {
       card_text = '';
     } else {
       card_text = '<span class="l-multiple">' + count + '</span>';
     }
-    card_html = '<li ' + bgStyle + '>' + card_text + '</li>';
+    card_html = '<li>' + card_text + '</li>';
 
     jel = $(card_html);
+    jel.attr('l-data', card);
     if (playable) {
         jel.attr('onclick', 'playCard(this)');
-        jel.attr('l-data', card);
     }
     return jel;
 }
@@ -175,7 +174,7 @@ function renderDiscardPile(card, card_v) {
         return;
 
     card_html = renderCard(card);
-    $("#l-discard").append(card_html);
+    $("#l-discard").html(card_html);
     discardPile_v = card_v;
 };
 
