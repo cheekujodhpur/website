@@ -5,5 +5,3 @@ _site/
 .jekyll-metadata
 .*.sw*
 Gemfile.lock
-
-Makefile
