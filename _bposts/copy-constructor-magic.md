@@ -2,7 +2,7 @@
 layout: blog
 title:  "Copy Constructor Magic"
 date:   2018-05-20 12:42:00
-categories: coding cpp
+categories: programming cpp
 ---
 
 <script markdown="0" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
