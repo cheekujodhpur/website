@@ -76,6 +76,11 @@ $(document).ready(function (){
                 'drink': 'Cortado', 'presentation': 4, 'texture': 2, 'flavour': 2,
                 'remarks': 'All I could taste was burnt milk.',
             },
+            {
+                'cafe': '<a target="_blank" href="https://goo.gl/maps/jkU5h9gepsx1yREX9">Fenna Eatery</a><br />',
+                'drink': 'Cortado', 'presentation': 5, 'texture': 4, 'flavour': 4,
+                'remarks': 'Beautiful Moroccan decor. Flavour is strong, reminded me of molasses. Texture could be one-notch thicker, but great taste overall.',
+            },
         ],
         columns: [
             { data: 'cafe', title: 'Cafe' },
