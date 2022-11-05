@@ -32,6 +32,10 @@ categories: travel food lifestyle
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+#ratingTable {
+    font-size: 0.75em;
+}
 </style>
 
 
@@ -39,7 +43,7 @@ I moved to Dubai recently for work, and one of my ventures here has been to find
 
 <table id="ratingTable"></table>
 
-<em>Last updated on 23<sup>th</sup> October 2022.</em>
+<em>Last updated on 05<sup>th</sup> November 2022.</em>
 
 <script>
 function convertToStars(num, type) {
@@ -48,38 +52,64 @@ function convertToStars(num, type) {
     else return num;
 }
 
+function convertDate(datestr, type) {
+    if(type == 'display') {
+        var d = new Date(Date.parse(datestr));
+        return d.toLocaleDateString(undefined, {'day': 'numeric', 'month': 'short', 'year': '2-digit'})
+    }
+    else return datestr
+}
+
 $(document).ready(function (){
     $('#ratingTable').DataTable({
         data: [
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/LXokNVVUmEyKWyJB9">Have Coffee - DIFC</a><br />',
+                'first_visit_date': '2022-10-07',
                 'drink': 'Espresso', 'presentation': 4, 'texture': 5, 'flavour': 5,
                 'remarks': 'Would appreciate if the espresso was presented with a cookie. However, the texture and flavour take the game away.',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/LXokNVVUmEyKWyJB9">Have Coffee - DIFC</a><br />',
+                'first_visit_date': '2022-10-07',
                 'drink': 'Piccolo', 'presentation': 5, 'texture': 5, 'flavour': 5,
                 'remarks': 'One can taste both the coffee and the milk. Great texture, great taste.',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/LXokNVVUmEyKWyJB9">Have Coffee - DIFC</a><br />',
+                'first_visit_date': '2022-10-07',
                 'drink': 'Cortado', 'presentation': 5, 'texture': 5, 'flavour': 5,
                 'remarks': 'Just a double piccolo or perhaps a piccolo is a half cortado. My go-to drink.',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/hcYpC9MJzNfh7pmD7">Around Eleven cafe - DIFC</a><br />',
+                'first_visit_date': '2022-10-12',
                 'drink': 'Piccolo', 'presentation': 4, 'texture': 3, 'flavour': 3,
                 'remarks': 'This had too much milk, which completely overshadowed the taste of coffee.',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/rDDo5epFTkeCWh5b8">The Coffee Lab</a><br />',
+                'first_visit_date': '2022-10-23',
                 'drink': 'Cortado', 'presentation': 4, 'texture': 2, 'flavour': 2,
                 'remarks': 'All I could taste was burnt milk.',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/jkU5h9gepsx1yREX9">Fenna Eatery</a><br />',
+                'first_visit_date': '2022-10-27',
                 'drink': 'Cortado', 'presentation': 5, 'texture': 4, 'flavour': 4,
                 'remarks': 'Beautiful Moroccan decor. Flavour is strong, reminded me of molasses. Texture could be one-notch thicker, but great taste overall.',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://goo.gl/maps/vdV6KZBKty4HqoYN7">Hoof - Dubai Mall</a><br />',
+                'first_visit_date': '2022-11-05',
+                'drink': 'Espresso', 'presentation': 5, 'texture': 5, 'flavour': 5,
+                'remarks': 'Presented with sparkling water and a description of the roast.',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://goo.gl/maps/vdV6KZBKty4HqoYN7">Hoof - Dubai Mall</a><br />',
+                'first_visit_date': '2022-11-05',
+                'drink': 'Cortado', 'presentation': 4, 'texture': 4, 'flavour': 3,
+                'remarks': 'Too much of a dark roast for cortado.',
             },
         ],
         columns: [
@@ -88,12 +118,14 @@ $(document).ready(function (){
             { data: 'presentation', title: 'Presentation', render: convertToStars },
             { data: 'texture', title: 'Texture', render: convertToStars},
             { data: 'flavour', title: 'Flavour', render: convertToStars },
+            { data: 'first_visit_date', title: 'First Visit', render: convertDate },
             { data: 'remarks', title: 'Remarks' },
         ],
         paging: false,
         searching: false,
         bInfo: false,
         responsive: true,
+        order: [[5, "desc"]],
     });
 });
 </script>
