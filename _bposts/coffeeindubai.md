@@ -43,7 +43,7 @@ I moved to Dubai recently for work, and one of my ventures here has been to find
 
 <table id="ratingTable"></table>
 
-<em>Last updated on 15<sup>th</sup> January 2023.</em>
+<em>Last updated on 4<sup>th</sup> February 2023.</em>
 
 <script>
 function convertToStars(num, type) {
@@ -66,20 +66,8 @@ $(document).ready(function (){
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/LXokNVVUmEyKWyJB9">Have Coffee - DIFC</a><br />',
                 'first_visit_date': '2022-10-07',
-                'drink': 'Espresso', 'presentation': 4, 'texture': 5, 'flavour': 5,
-                'remarks': 'Would appreciate if the espresso was presented with a cookie. However, the texture and flavour take the game away.',
-            },
-            {
-                'cafe': '<a target="_blank" href="https://goo.gl/maps/LXokNVVUmEyKWyJB9">Have Coffee - DIFC</a><br />',
-                'first_visit_date': '2022-10-07',
-                'drink': 'Piccolo', 'presentation': 5, 'texture': 5, 'flavour': 5,
-                'remarks': 'One can taste both the coffee and the milk. Great texture, great taste.',
-            },
-            {
-                'cafe': '<a target="_blank" href="https://goo.gl/maps/LXokNVVUmEyKWyJB9">Have Coffee - DIFC</a><br />',
-                'first_visit_date': '2022-10-07',
-                'drink': 'Cortado', 'presentation': 5, 'texture': 5, 'flavour': 5,
-                'remarks': 'Just a double piccolo or perhaps a piccolo is a half cortado. My go-to drink.',
+                'drink': 'Espresso, Piccolo, Cortado, Cappuccino', 'presentation': 4, 'texture': 5, 'flavour': 5,
+                'remarks': 'Would appreciate if the espresso was presented with a cookie. However, the texture and flavour take the game away. For the milk coffees, the foam texture is outstanding.',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/hcYpC9MJzNfh7pmD7">Around Eleven cafe - DIFC</a><br />',
@@ -96,20 +84,14 @@ $(document).ready(function (){
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/jkU5h9gepsx1yREX9">Fenna Eatery</a><br />',
                 'first_visit_date': '2022-10-27',
-                'drink': 'Cortado', 'presentation': 5, 'texture': 4, 'flavour': 4,
+                'drink': 'Espresso, Cortado, Cappuccino, Atay, Spiced Coffee', 'presentation': 5, 'texture': 4, 'flavour': 4,
                 'remarks': 'Beautiful Moroccan decor. Flavour is strong, reminded me of molasses. Texture could be one-notch thicker, but great taste overall.',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/vdV6KZBKty4HqoYN7">Hoof - Dubai Mall</a><br />',
                 'first_visit_date': '2022-11-05',
-                'drink': 'Espresso', 'presentation': 5, 'texture': 5, 'flavour': 5,
-                'remarks': 'Presented with sparkling water and a description of the roast.',
-            },
-            {
-                'cafe': '<a target="_blank" href="https://goo.gl/maps/vdV6KZBKty4HqoYN7">Hoof - Dubai Mall</a><br />',
-                'first_visit_date': '2022-11-05',
-                'drink': 'Cortado', 'presentation': 4, 'texture': 4, 'flavour': 3,
-                'remarks': 'Too much of a dark roast for cortado.',
+                'drink': 'Espresso, Cortado', 'presentation': 5, 'texture': 5, 'flavour': 5,
+                'remarks': 'Presented with sparkling water and a description of the roast. Their roast is too dark for milk coffees in my opinion',
             },
             {
                 'cafe': '<a target="_blank" href="https://goo.gl/maps/65jK6Mk8BjGSsbgE8">The Espresso Lab - D3</a><br />',
@@ -122,6 +104,18 @@ $(document).ready(function (){
                 'first_visit_date': '2023-01-14',
                 'drink': 'Espresso', 'presentation': 5, 'texture': 3, 'flavour': 3,
                 'remarks': 'Good cafe. Loved the service and decor.',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://goo.gl/maps/xZ7sKxwnVUo5v2Hd9">Bliss\'d DIFC</a><br />',
+                'first_visit_date': '2023-01-04',
+                'drink': 'Espresso, Macchiato, Cappuccino', 'presentation': 3, 'texture': 4, 'flavour': 3,
+                'remarks': 'They have great outdoor seating, but their coffee is not consistent.',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://goo.gl/maps/jTjX7u52BJ1q88XXA">KIMBO Espresso Italiano</a><br />',
+                'first_visit_date': '2023-01-31',
+                'drink': 'Espresso', 'presentation': 4, 'texture': 4, 'flavour': 4,
+                'remarks': 'It\'s in the name. Typical acidic roast served with cookie.',
             },
         ],
         columns: [
