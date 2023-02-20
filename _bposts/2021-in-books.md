@@ -2,7 +2,7 @@
 layout: blog
 title:  "2021 in Books"
 date:   2021-12-25 00:20:37
-categories: musings books
+categories: musings literature
 ---
 
 We will talk about my journey for a couple of paragraphs before moving on to the book recommendations. In 2020, I decided that a missing piece of my personality is my absolute lack of skill in sports. I was terrible at cricket with the gully kids, bad at football in school and college, pathetic at chess with friends at work and laughable at competitive esports games like League of Legends. Honestly, I am bad at all of them. But I decided to fix this once and for all. I spent all of 2020 trying to improve my LoL skills. That was a disaster. I simply lacked both mechanical and strategical skills required in the game.
