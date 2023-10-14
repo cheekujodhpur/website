@@ -43,7 +43,7 @@ I moved to Dubai recently for work, and one of my ventures here has been to find
 
 <table id="ratingTable"></table>
 
-<em>Last updated on 4<sup>th</sup> February 2023.</em>
+<em>Last updated on 14<sup>th</sup> October 2023.</em>
 
 <script>
 function convertToStars(num, type) {
@@ -116,6 +116,12 @@ $(document).ready(function (){
                 'first_visit_date': '2023-01-31',
                 'drink': 'Espresso', 'presentation': 4, 'texture': 4, 'flavour': 4,
                 'remarks': 'It\'s in the name. Typical acidic roast served with cookie.',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://maps.app.goo.gl/HiXcJ7HjEQ3DuMEEA">Bo\'s Coffee</a><br />',
+                'first_visit_date': '2023-10-14',
+                'drink': 'Espresso', 'presentation': 3, 'texture': 3, 'flavour': 3,
+                'remarks': 'Good location and ambience, unimpressive coffee',
             },
         ],
         columns: [
