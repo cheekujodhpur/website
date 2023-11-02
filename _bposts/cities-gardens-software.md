@@ -45,7 +45,7 @@ Compare Brasília to Hong Kong, arguably one of the most successful new cities i
 
 ### On Gardens
 
-One of my top reads from last year was a [gardener's memoir](https://www.goodreads.com/book/show/53176781-seed-to-dust). I have listed this book among my favourites in an [earlier blog post](https://kumar-ayush.com/bposts/2021-in-books.html). It is pretty amusing that the author Marc Hamer shares his first name with our billionaire in the previous section.
+One of my top reads from last year was a [gardener's memoir](https://www.goodreads.com/book/show/53176781-seed-to-dust). I have listed this book among my favourites in an [earlier blog post]({% link _bposts/2021-in-books.md %}){:target="_blank"}. It is pretty amusing that the author Marc Hamer shares his first name with our billionaire in the previous section.
 
 At one point, the author recalls when he refused to spray chemicals in the garden in protest of the landlady's request. From Page 113,
 <blockquote>
