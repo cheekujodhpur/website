@@ -43,7 +43,7 @@ I moved to Dubai recently for work, and one of my ventures here has been to find
 
 <table id="ratingTable"></table>
 
-<em>Last updated on 25<sup>th</sup> October 2023.</em>
+<em>Last updated on 17<sup>th</sup> December 2023.</em>
 
 <script>
 function convertToStars(num, type) {
@@ -129,7 +129,24 @@ $(document).ready(function (){
                 'drink': 'Espresso', 'presentation': 3, 'texture': 5, 'flavour': 5,
                 'remarks': 'Excellent mesa ambience, all medium roasts and Barista\'s finest blend is beautiful',
             },
-
+            {
+                'cafe': '<a target="_blank" href="https://maps.app.goo.gl/YM4uQ2wKYTKcNHDU9">Roasters Specialty Coffee House</a><br />',
+                'first_visit_date': '2023-11-28',
+                'drink': 'Espresso', 'presentation': 4, 'texture': 3, 'flavour': 3,
+                'remarks': 'Nothing exceptional about it, more hype than worth',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://maps.app.goo.gl/Euh6yavwrtNeZ1T39">Common Grounds - DIFC</a><br />',
+                'first_visit_date': '2023-12-11',
+                'drink': 'Espresso', 'presentation': 4, 'texture': 4, 'flavour': 4,
+                'remarks': 'Generically good stuff',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://maps.app.goo.gl/YMvaSE3yvxZrcVv68">Nightjar Coffee Roasters</a><br />',
+                'first_visit_date': '2023-12-17',
+                'drink': 'Espresso', 'presentation': 5, 'texture': 5, 'flavour': 5,
+                'remarks': 'Legendary place, have multiple roast options and great food too',
+            },
         ],
         columns: [
             { data: 'cafe', title: 'Cafe' },
