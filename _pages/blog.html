@@ -8,42 +8,20 @@ permalink: /blog/
 
 <section>
 <div class="row">
+  {% for bpost in bposts %}
     <div class="6u 12u$(medium)">
-        {% for bpost in bposts %}
-        {% assign mod = forloop.index | modulo: 2 %}
-        {% if mod == 1 %}
-            {% if bpost.exturl %}
-            <header>
-                <h5><a href="{{ bpost.exturl }}">{{ bpost.title }}</a></h5>
-                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-            </header>
-            {% else %}
-            <header>
-                <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
-                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-            </header>
-            {% endif %}
-        {% endif %}
-        {% endfor %}
+      {% if bpost.exturl %}
+      <header>
+          <h5><a href="{{ bpost.exturl }}">{{ bpost.title }}</a></h5>
+          <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+      </header>
+      {% else %}
+      <header>
+          <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
+          <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+      </header>
+      {% endif %}
     </div>
-
-    <div class="6u 12u$(medium)">
-        {% for bpost in bposts %}
-        {% assign mod = forloop.index | modulo: 2 %}
-        {% if mod == 0 %}
-            {% if bpost.exturl %}
-            <header>
-                <h5><a href="{{ bpost.exturl }}">{{ bpost.title }}</a></h5>
-                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-            </header>
-            {% else %}
-            <header>
-                <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
-                <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-            </header>
-            {% endif %}
-        {% endif %}
-        {% endfor %}
-    </div>
+  {% endfor %}
 </div>
 </section>
