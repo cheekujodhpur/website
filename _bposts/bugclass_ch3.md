@@ -2,7 +2,7 @@
 layout: blog
 title:  "Classification of Bugs: Chapter 3 - Case Sensitivity Rules"
 date:   2020-09-19 17:32:04
-categories: classification-of-bugs musings
+categories: classification-of-bugs programming
 ---
 
 ### Case Sensitivity Rules

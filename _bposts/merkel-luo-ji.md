@@ -2,7 +2,7 @@
 layout: blog
 title:  "Merkel = Luo Ji?"
 date:   2022-02-04 12:20:37
-categories: musings politics
+categories: politics
 ---
 
 As of writing, Russian troops are positioned at Ukraine's borders. Vladimir Putin, current president of Russia, claims he has no intentions to invade Ukraine. The West disagrees. Ukraine's president Volodymyr Zelensky has accused the West of alarmism. Putin, however, has threatened "appropriate retaliatory military-technical measures". As retaliations are in response to an action, in this case, that action is discussions for Ukraine to become part of the NATO alliance.[^1]

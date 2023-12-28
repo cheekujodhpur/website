@@ -2,7 +2,7 @@
 layout: blog
 title:  "Everything is supply chain management"
 date:   2021-08-21 11:20:37
-categories: musings programming
+categories: programming
 ---
 
 A few weeks ago, Github announced [Copilot](https://copilot.github.com/). They call it an AI pair programmer. It is the next level of autocomplete. It will write entire procedures for you based on context. The news was flooded with excitement. I witnessed a lot of suggestions on how this will revolutionise the software industry. I don't know about that. Maybe it will. Perhaps it is indeed helpful for many folks, but I found no inkling of excitement in myself. I have tremendous appreciation for what they have built as an engineer. But I don't particularly look forward to using it. I cannot remember a situation where a tool like this would have considerably improved my productivity. It would have made an incremental difference, sure, but not a revolutionary difference. I don't spend the toughest hours of my week struggling to write a procedure, thinking about optimal syntax to achieve what I want to achieve. I am pretty comfortable with the languages and frameworks that I need to use. As far as the algorithm is concerned, a brute-force approach goes a long way. Optimisation always comes much later. And even then, the internet search is good enough for the number of times I need to do it. What then is the challenge in my life? What do I spend the toughest hours of my week doing? 

@@ -2,7 +2,7 @@
 layout: blog
 title:  "Classification of Bugs: Chapter 2 - Local Variables"
 date:   2020-05-23 19:27:30
-categories: classification-of-bugs musings
+categories: classification-of-bugs programming
 ---
 
 ### Local Variables

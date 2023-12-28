@@ -2,7 +2,7 @@
 layout: blog
 title:  "Unit Tests breathe soul into your code"
 date:   2021-06-20 11:02:14
-categories: musings programming
+categories: programming
 ---
 
 As many of you may know, this blog is a self-discovery process.

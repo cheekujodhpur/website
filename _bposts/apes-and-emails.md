@@ -2,7 +2,7 @@
 layout: blog
 title:  "Apes and important emails"
 date:   2022-04-23 10:20:37
-categories: musings causality
+categories: causality
 ---
 
 Have you read the children's story about a cap seller's encounter with a troop of monkeys? It is pretty straightforward for an adult: A cap-seller falls asleep under a tree in a forest. She is wearing a cap. A group of monkeys descend upon her and grab a cap from her merchandise. When she wakes up and realises what has transpired, she takes off her hat and throws it on the ground. Looking at her, all the monkeys do the same. She collects them all and moves on. Monkeys imitate; that's the lesson. Even if you knew this, I highly recommend you try this hilarious [YouTube video](https://www.youtube.com/watch?v=ykFLZywRxeM) illustrating this.

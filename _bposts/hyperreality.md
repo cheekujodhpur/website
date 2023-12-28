@@ -2,7 +2,7 @@
 layout: blog
 title:  "We vote in hyperreality"
 date:   2023-11-01 10:20:37
-categories: musings
+categories: philosophy
 ---
 
 _This is the second in a two-part series. Read the [fiction piece]({% link _bposts/raj-the-banyan-tree.md %}){:target="_blank"} first for fun, but not a pre-requisite._

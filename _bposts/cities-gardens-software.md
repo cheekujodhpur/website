@@ -2,7 +2,7 @@
 layout: blog
 title:  "Cities, Gardens and Software Systems"
 date:   2022-05-06 00:20:37
-categories: musings software
+categories: programming
 ---
 
 What do cities, gardens and software systems have in common?

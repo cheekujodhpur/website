@@ -2,7 +2,7 @@
 layout: blog
 title:  "Malazan and A.I."
 date:   2023-02-19 10:20:37
-categories: literature ai musings
+categories: literature ai
 ---
 
 Since the pandemic, I have spent a disproportionate share of time reading fantasy and sci-fi books. My latest addiction is books from the [Malazan world](https://en.wikipedia.org/wiki/Malazan_Book_of_the_Fallen). Given that I'd instead be reading history, politics or philosophy if not fiction, these books provide an enthralling experience. Reading the Malazan series feels like we are being presented with a newspaper or a journal. A few characters in the series play the role of historians and poets, and it does feel that if we are expected to relate to anyone, it is them. Often, the reader will find themself reading a philosophical monologue on just about any topic. It is always contextual, often has elements of foreshadowing or retrospective revelations about the story, and yet the diversity. The world is rich and ripe. I would find my imagination lacking before complaining about Malazan's worldbuilding elements. There are entire histories, sociologies and philosophies contained within a fictional series. The author often drives inspiration from actual history, which is quite apparent, but it is well done enough not to matter. These books are a study of their own, and I am incredibly grateful to be introduced to these books.

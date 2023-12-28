@@ -2,7 +2,7 @@
 layout: blog
 title:  "Gourds of India - Introduction"
 date:   2021-01-01 11:02:14
-categories: musings food
+categories: food
 ---
 
 What makes our palate? We grow up in different cultures.

@@ -2,7 +2,7 @@
 layout: blog
 title:  "Classification of Bugs: Chapter 1 - Null and Empty"
 date:   2020-04-09 23:52:02
-categories: classification-of-bugs musings
+categories: classification-of-bugs programming
 ---
 ### Introduction
 I am not the best programmer in the world. I wouldn't know or care to know what it means to be that. Are you the fastest to implement a feature? Are you handy with multiple languages and frameworks? Is your code the most bug-free? Is it the most readable code? All of the above? I don't know. People have written [potential descriptions](https://twitter.com/skirani/status/1149302828420067328). Judge for yourself. I am deviating... *deep breath*

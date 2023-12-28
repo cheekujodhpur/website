@@ -2,7 +2,7 @@
 layout: blog
 title:  "Keynes and Umaid Bhawan Palace"
 date:   2021-10-21 11:20:37
-categories: musings economics history
+categories: economics history
 ---
 
 The world is waking up from a pandemic wave. We don't know if there will be another wave. Globally, we're at the trough after three waves, and it does seem like we're past the minima here. Russia and UK are reporting a concerning rise in new cases.  With this background, the US passed the [$1 trillion infrastructure bill](https://www.reuters.com/world/us/whats-bipartisan-us-1-trillion-infrastructure-bill-2021-10-01/). Apart from fulfilling the generally good idea of upgrading a country's infrastructure, what good do such bills do? In India, we've started construction work on [Central Vista](https://timesofindia.indiatimes.com/india/centra-vista-construction-work-of-new-parliament-building-begins/articleshow/80281729.cms), which would be our new parliament building. There are two straightforward points in favour of the project. One, it provides employment. Two, it serves some symbolic notion of a new India. There are several critics of this project. The critics would agree with the first point and would disagree with the need for the second. After all, expenditure on schools and hospitals could also serve towards employment. I do have my views here, but our plan for today is not politics. Let's dial back. The common theme between these two examples is government spending leading to a rise in employment. Where have I heard that before? 

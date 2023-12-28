@@ -2,7 +2,7 @@
 layout: blog
 title:  "What is worth doing?"
 date:   2020-01-10 16:59:58  
-categories: musings
+categories: philosophy
 ---
 Why does haute couture exist? We frequently make fun of models that wear absurd designs and walk the runways. "Who wears these?" we say. Why is such a large amount of money spent on something worthless? Well, I am going to argue that this is no different than copious amounts of funding paid to scientific research. If you're convinced of the latter, you must agree to the former. You may be scratching your head or searching for mine. Maybe you want to bonk me on the head and bring me back to my senses. But, allow me to make my case. 
 

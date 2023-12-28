@@ -2,7 +2,7 @@
 layout: blog
 title:  "Uber Economy in India"
 date:   2019-11-14 19:33:20
-categories: musings
+categories: economics
 ---
 
 I have wanted to write about this subject for a while. The primary inertia in these kinds of bits comes from the effort to link references which give the reader enough background before I put my simple point. Lucky for me, less than 24 hours ago, New Jersey imposed a fine of $649 million on Uber for treating drivers as independent contractors as opposed to counting them as its employees. This [NYT article](https://www.nytimes.com/2019/11/14/nyregion/uber-new-jersey-drivers.html) sums up the necessary background pretty well.
