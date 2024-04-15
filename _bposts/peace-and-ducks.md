@@ -6,7 +6,7 @@ categories: memoir
 ---
 
 ### Introduction
-I went on a road trip to Jaisalmer with [Anuj Shetty]("http://www.facebook.com/shetty.anuj") and [Keshav Srinivasan]("https://www.facebook.com/keshav.srinivasan"). A central theme of the trip was 'ducking' and Keshav saying 'Peace!' in response to almost any opinion-based question thrown at him. First day was spent in Jodhpur, while the next three on the trip.
+I went on a road trip to Jaisalmer with [Anuj Shetty](http://www.facebook.com/shetty.anuj) and [Keshav Srinivasan](https://www.facebook.com/keshav.srinivasan). A central theme of the trip was 'ducking' and Keshav saying 'Peace!' in response to almost any opinion-based question thrown at him. First day was spent in Jodhpur, while the next three on the trip.
 
 #### Day 1
 They came. They brushed. They bathed. They ate. We departed for the Mehrangarh fort in Jodhpur.
