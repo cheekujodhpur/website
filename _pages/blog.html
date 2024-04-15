@@ -4,23 +4,35 @@ title: Blog
 permalink: /blog/
 ---
 
+{% assign top_bposts = site.bposts | where_exp:"item", "item.title contains 'Dubai'" %}
 {% assign bposts = site.bposts | reverse %}
 
 <section>
 <div class="row">
+  {% for bpost in top_bposts %}
+    <div class="6u 12u$(medium)">
+    {% if bpost.exturl %}
+    {% assign burl = bpost.exturl %}
+    {% else %}
+    {% assign burl = bpost.url %}
+    {% endif %}
+    <header>
+        <h5><a href="{{ burl }}">{{ bpost.title }}</a></h5>
+        <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+    </header>
+    </div>
+  {% endfor %}
   {% for bpost in bposts %}
     <div class="6u 12u$(medium)">
-      {% if bpost.exturl %}
-      <header>
-          <h5><a href="{{ bpost.exturl }}">{{ bpost.title }}</a></h5>
-          <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-      </header>
-      {% else %}
-      <header>
-          <h5><a href="{{ bpost.url }}">{{ bpost.title }}</a></h5>
-          <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
-      </header>
-      {% endif %}
+    {% if bpost.exturl %}
+    {% assign burl = bpost.exturl %}
+    {% else %}
+    {% assign burl = bpost.url %}
+    {% endif %}
+    <header>
+        <h5><a href="{{ burl }}">{{ bpost.title }}</a></h5>
+        <p><i>{{ bpost.date | date: "%B %Y" }}</i> - {{ bpost.categories | join: ", " }}</p>
+    </header>
     </div>
   {% endfor %}
 </div>
