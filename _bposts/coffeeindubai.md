@@ -43,7 +43,7 @@ I moved to Dubai recently for work, and one of my ventures here has been to find
 
 <table id="ratingTable"></table>
 
-<em>Last updated on 17<sup>th</sup> December 2023.</em>
+<em>Last updated on 18<sup>th</sup> May 2024.</em>
 
 <script>
 function convertToStars(num, type) {
@@ -146,6 +146,18 @@ $(document).ready(function (){
                 'first_visit_date': '2023-12-17',
                 'drink': 'Espresso', 'presentation': 5, 'texture': 5, 'flavour': 5,
                 'remarks': 'Legendary place, have multiple roast options and great food too',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://maps.app.goo.gl/VUjVkbe44F4P3nCU8">%ARABICA</a><br />',
+                'first_visit_date': '2024-03-20',
+                'drink': 'Espresso', 'presentation': 3, 'texture': 4, 'flavour': 4,
+                'remarks': 'This is a front cover cafe for UAE, and a good one to add to regulars',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://maps.app.goo.gl/v67F1CfswRsWXkd66">Risen Café and Artisanal Bakery</a><br />',
+                'first_visit_date': '2024-05-14',
+                'drink': 'Espresso', 'presentation': 3, 'texture': 4, 'flavour': 5,
+                'remarks': 'Quite an unordinary place since part of a hotel, not famous for anything. Surprisingly good.',
             },
         ],
         columns: [
