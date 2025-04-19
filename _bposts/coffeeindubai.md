@@ -43,7 +43,7 @@ I moved to Dubai recently for work, and one of my ventures here has been to find
 
 <table id="ratingTable"></table>
 
-<em>Last updated on 18<sup>th</sup> May 2024.</em>
+<em>Last updated on 19<sup>th</sup> Apr 2025.</em>
 
 <script>
 function convertToStars(num, type) {
@@ -158,6 +158,12 @@ $(document).ready(function (){
                 'first_visit_date': '2024-05-14',
                 'drink': 'Espresso', 'presentation': 3, 'texture': 4, 'flavour': 5,
                 'remarks': 'Quite an unordinary place since part of a hotel, not famous for anything. Surprisingly good.',
+            },
+            {
+                'cafe': '<a target="_blank" href="https://maps.app.goo.gl/61wLMzHdLtpW7MKM6">Bando Coffee House - Wafi Mall</a><br />',
+                'first_visit_date': '2025-04-08',
+                'drink': 'Boom', 'presentation': 5, 'texture': 4, 'flavour': 5,
+                'remarks': 'Had their signature drink which is a citrusy espresso one, extraordinary taste. Great ambience too',
             },
         ],
         columns: [
