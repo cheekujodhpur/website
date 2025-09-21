@@ -43,3 +43,5 @@ The distribution of work responsibilities against socioeconomic class has fatten
 
 True that there are machines to help them. Technology has improved safety for those workers over the years, but they are not Keynesian cogs, in any sense. They are doing their job both because society needs them to and because they need the money to survive. When nihilism knocks on their door, they answer with their aspirations that there's a better future for them, their children, and their grandchildren.
 
+
+[Part 2]({% link _bposts/keynesian-cogs-2.md %}){:target="_blank"}
