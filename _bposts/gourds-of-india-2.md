@@ -5,7 +5,7 @@ date:   2026-02-09 20:20:30
 categories: food
 ---
 
-I wrote the [introduction]({% link _bposts/gourds-of-india-2.md %}){:target="_blank"} to this series 5 years ago. Despite continuing my rant about the concept, I never pursued this because I was never satisfied with the quality of the content I could give out. The breakeven point has been reached. The cost of keeping these secrets to myself is now much higher than the regret of producing subpar blog post. Who’s reading this anyway except my future self? The compromise is straightforward - I am going to link to recipes and talk about it, as compared to posting my own recipe videos.
+I wrote the [introduction]({% link _bposts/gourds-of-india-1.md %}){:target="_blank"} to this series 5 years ago. Despite continuing my rant about the concept, I never pursued this because I was never satisfied with the quality of the content I could give out. The breakeven point has been reached. The cost of keeping these secrets to myself is now much higher than the regret of producing subpar blog post. Who’s reading this anyway except my future self? The compromise is straightforward - I am going to link to recipes and talk about it, as compared to posting my own recipe videos.
 
 There is a whole class of recipes which involve bottle, ridge or sponge gourd combined with a pulse or legume. In various parts of India, ridge gourd and sponge gourd are called turai and nenua in all possible permutations, but they do have subtly different textures. Ridge gourd has an additional feature that you can make a chutney; more on that in a future post.
 
