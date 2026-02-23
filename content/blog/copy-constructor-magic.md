@@ -8,7 +8,7 @@ categories:
 ---
 
 <script markdown="0" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<p><i>This post is co-authored with [Meet Udeshi](http://udiboy1209.github.io/).</i></p>
+<p><i>This post is co-authored with <a href="http://udiboy1209.github.io/">Meet Udeshi</a>.</i></p>
 
 <p>Examine this piece of code. It has two classes `foo` and `bar`, `bar` has an instance of `foo` and a function which fetches a new instance of `foo`, but the local variable in the function uses the same name as the member instance of `foo` in `bar`. This is allowed, `-Wshadow` will provide you a warning. But it is understood that this can result in unexpected or garbage output.</p>
 

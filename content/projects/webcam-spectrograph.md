@@ -29,5 +29,5 @@ excerpt: >-
     </div>
 </div>
 <!--break-->
-<p>The full presentation is available [here](https://docs.google.com/presentation/d/1qCOpMDIkoW5DiRjUoKt6KazmboxlhlZCXlEeynKLJM0/edit?usp=sharing).</p>
+<p>The full presentation is available <a href="https://docs.google.com/presentation/d/1qCOpMDIkoW5DiRjUoKt6KazmboxlhlZCXlEeynKLJM0/edit?usp=sharing">here</a>.</p>
 <p>Thanks to <em>Sandesh Kalantre</em> for working with me on this project, and <em>Prof. Tapanendu Kundu</em> for his guidance.</p>

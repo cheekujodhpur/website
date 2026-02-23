@@ -58,5 +58,5 @@ excerpt: >-
 </li>
 </ul>
 <!--break-->
-<p>Our complete presentation can be found [here](/media/CS726-report.pdf).</p>
+<p>Our complete presentation can be found <a href="/media/CS726-report.pdf">here</a>.</p>
 <p>Thanks to <em>Anuj Shetty</em>, <em>Tejas Srinivasan</em> and <em>Sandesh Kalantre</em> for working with me on this project.</p>

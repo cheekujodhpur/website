@@ -16,10 +16,10 @@ excerpt: >-
   1967. In 2015, IPhO was held in Mumbai, India. I was part of the team
   responsible for the technical backend of the event.</p>
 ---
-<p>The [International Physics Olympiad (IPhO)]("https://en.wikipedia.org/wiki/International_Physics_Olympiad") is an annual physics competition for high school students. It is one of the International Science Olympiads. The first IPhO was held in Warsaw, Poland in 1967. In 2015, IPhO was held in Mumbai, India. I was part of the team responsible for the technical backend of the event.</p>
+<p>The <a href=""https://en.wikipedia.org/wiki/International_Physics_Olympiad"">International Physics Olympiad (IPhO)</a> is an annual physics competition for high school students. It is one of the International Science Olympiads. The first IPhO was held in Warsaw, Poland in 1967. In 2015, IPhO was held in Mumbai, India. I was part of the team responsible for the technical backend of the event.</p>
 
 <p>The procedures involve international board meetings for discussions on question paper before it is presented to the participants et cetera. Leaders are also required to translate the question paper to their respective languages and submit to the host country. Vote on certain matters was taken by a show of hands, and files downloaded and uploaded via pendrives handled by volunteers. Discussions would require paper notes flowing through the hall.</p>
-<p>My role, in a team of 3, involved developing a browser-based application which would automate the entire process. The entire code and documentation for IPhOrum is stored here at its [Github repository](https://github.com/cheekujodhpur/ipho2015/).</p>
+<p>My role, in a team of 3, involved developing a browser-based application which would automate the entire process. The entire code and documentation for IPhOrum is stored here at its <a href="https://github.com/cheekujodhpur/ipho2015/">Github repository</a>.</p>
 <!--break-->
 <p>In 2016, International Olympiad on Astronomy and Astrophysics (IOAA) was held in India, and the software was used again. On both occasions, the software was instrumental in streamlining the process and we received positive comments.</p>
 <!--break-->

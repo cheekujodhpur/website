@@ -8,7 +8,7 @@ categories:
   - multiprocessing
 ---
 
-<p>Hello readers! Meet and I participated in the 6th edition of [Hack InOut](https://hackinout.co) this year.
+<p>Hello readers! Meet and I participated in the 6th edition of <a href="https://hackinout.co">Hack InOut</a> this year.
 It was very convenient as both of us are now employed in Bengaluru. 
 We took a repeat shot at our augmented reality venture that was <a href="/projects/bellatrix/" target="_blank" rel="noopener noreferrer">Bellatrix</a>.
 I recommend reading that tiny post before you read this post, but it is not critical to understanding the following.
@@ -50,5 +50,5 @@ This worked beautifully. We could churn out 30 fps and more throttled only by th
 I take extreme pride in returning to old problems after learning new techniques. That means this is not over. Until next time...
 </p>
 
-<p>Thanks to _Meet Udeshi_ for working with me on this project. Our github repository can be found [here](https://github.com/cheekujodhpur/beetlegoose).</p>
+<p>Thanks to _Meet Udeshi_ for working with me on this project. Our github repository can be found <a href="https://github.com/cheekujodhpur/beetlegoose">here</a>.</p>
 

@@ -16,7 +16,7 @@ excerpt: >-
 ---
 <p>Mood Indigo is the cultural festival of IIT Bombay held in December every year. As part of the publicity, they have an online treasure hunt. In 2015, I designed the challenges with some original artwork by B.Des students.</p>
 
-<p>I look at games as a medium of interactive storytelling. They are a work of art. If I am designing one, I would insist on ensuring that we pay specific attention to the artwork as much as the mechanics. In this [project](https://bitbucket.org/cheekujodhpur/mith), the levels were designed with the help of <i>Anuj Shetty</i>, <i>Keshav Srinivasan</i> and <i>Mikail Khona</i>, and the artwork is owed to <i>Riddhi Tomar</i>, <i>Anagha Rao</i> and <i>Maulashree Shanbhag</i>.</p>
+<p>I look at games as a medium of interactive storytelling. They are a work of art. If I am designing one, I would insist on ensuring that we pay specific attention to the artwork as much as the mechanics. In this <a href="https://bitbucket.org/cheekujodhpur/mith">project</a>, the levels were designed with the help of <i>Anuj Shetty</i>, <i>Keshav Srinivasan</i> and <i>Mikail Khona</i>, and the artwork is owed to <i>Riddhi Tomar</i>, <i>Anagha Rao</i> and <i>Maulashree Shanbhag</i>.</p>
 <p>This was supposed to be a story of a squirrel, which is the mascot for Mood Indigo who travels to IIT Bombay to attend the fest. I have shared the artwork below, which I dreamt and was refined and put together by the generous people credited above.</p>
 <!--break-->
 <div markdown="0" class="box alt">
