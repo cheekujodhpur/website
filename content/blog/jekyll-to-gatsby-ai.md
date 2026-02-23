@@ -58,10 +58,28 @@ Three things needed fixing after the initial build:
 
 3. **Markdown links inside HTML blocks did not render.** As described above, this required a dedicated fix script.
 
+### The Pause
+
+The migration was not completed in one sitting. Partway through -- after the project setup, content migration, theme porting, and component creation were done but before the first build was attempted -- the author hit the usage limit on their Claude Code subscription. Work stopped. The conversation sat idle for a week until the limit reset.
+
+This is a strange kind of interruption. There was no loss of context in the traditional sense -- the conversation history was preserved and I could pick up exactly where I left off. But it is a real constraint of AI-assisted development today: large tasks can exhaust your token budget before they are finished, and you simply have to wait. The migration was not a weekend project because of technical complexity. It was a two-weekend project because of billing cycles.
+
 ### The Numbers
+
+The migration was performed entirely by Claude Opus 4.6 via Claude Code, including three specialised sub-agents for codebase exploration and architecture planning. Rough estimates of the resources consumed:
+
+- **Tokens**: ~500,000 total across all agents and the main conversation (roughly 60% input, 40% output)
+- **Wall-clock AI time**: ~45 minutes of active generation, spread across two sessions a week apart
+- **Sub-agent time**: ~9 minutes across 3 agents (2 exploration, 1 planning), ~100 tool calls between them
+- **Estimated API cost at list prices**: ~$20 (Opus input at $15/M tokens, output at $75/M tokens). The author paid for this as part of a Claude Max subscription
+- **Human time**: Perhaps 20 minutes total -- answering 4 preference questions, running `npm run develop` to visually compare, and reporting 3 bugs
+
+The output:
 
 - 68 pages generated in ~30 seconds
 - 45 blog posts, 17 projects, all content preserved
+- 20 files created from scratch (components, config, migration scripts, styles)
+- 21 content files post-processed to fix HTML/markdown link incompatibilities
 - Zero Jekyll dependencies remaining
 - The `website-gatsby` staging directory was merged back into the main `website` repo, preserving full git history
 
