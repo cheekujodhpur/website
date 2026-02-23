@@ -1,7 +1,5 @@
-# Jekyll related files
-
-_site/
-.sass-cache/
-.jekyll-metadata
-.*.sw*
-Gemfile.lock
+node_modules/
+.cache/
+public/
+.env*
+*.log

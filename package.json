@@ -1,0 +1,42 @@
+{
+  "name": "website-gatsby",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "migrate": "node scripts/migrate-content.js",
+    "deploy": "gatsby build && aws s3 sync public/ s3://kumar-ayush.com --delete"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "gatsby": "^5.16.1",
+    "gatsby-plugin-feed": "^5.16.0",
+    "gatsby-plugin-image": "^3.16.0",
+    "gatsby-plugin-react-helmet": "^6.16.0",
+    "gatsby-plugin-sharp": "^5.16.0",
+    "gatsby-plugin-sitemap": "^6.16.0",
+    "gatsby-plugin-styled-components": "^6.16.0",
+    "gatsby-remark-copy-linked-files": "^6.16.0",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^7.16.0",
+    "gatsby-remark-prismjs": "^7.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-remark": "^6.16.0",
+    "gatsby-transformer-sharp": "^5.16.0",
+    "gray-matter": "^4.0.3",
+    "he": "^1.2.0",
+    "prismjs": "^1.30.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^6.3.9"
+  }
+}
