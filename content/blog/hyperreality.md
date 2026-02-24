@@ -6,7 +6,7 @@ categories:
   - philosophy
 ---
 
-_This is the second in a two-part series. Read the <a href="/blog/raj-the-banyan-tree/" target="_blank" rel="noopener noreferrer">fiction piece</a> first for fun, but not a pre-requisite._
+_This is the second in a two-part series. Read the [fiction piece](/blog/raj-the-banyan-tree/) first for fun, but not a pre-requisite._
 
 Raj is a commentary on various topics. In a meta sense, that is intentional to draw more focus to the core ideas it is supposed to be about. And those ideas are postmodernism's hyperreality, simulacra and simulation.
 

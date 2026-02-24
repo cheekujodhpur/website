@@ -6,7 +6,7 @@ categories:
   - literature
 ---
 
-_A continuation from <a href="/blog/2022-in-books/" target="_blank" rel="noopener noreferrer">2022 in books</a>._
+_A continuation from [2022 in books](/blog/2022-in-books/)._
 
 ### Best in Fiction
 #### [The Brothers Karamazov](https://www.goodreads.com/book/show/4934.The_Brothers_Karamazov)

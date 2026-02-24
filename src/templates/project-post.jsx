@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
@@ -90,6 +90,14 @@ const ContentWrapper = styled.section`
 const ProjectPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
   const { title, subtitle, date, image } = post.frontmatter;
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    contentRef.current?.querySelectorAll('a').forEach((link) => {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  }, []);
 
   return (
     <Layout>
@@ -110,7 +118,7 @@ const ProjectPostTemplate = ({ data }) => {
             {subtitle && <h3>{subtitle}</h3>}
             <p><em>{date}</em></p>
 
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div ref={contentRef} dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
         </ContentWrapper>
       </article>

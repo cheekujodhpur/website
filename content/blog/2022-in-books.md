@@ -6,7 +6,7 @@ categories:
   - literature
 ---
 
-_A continuation from <a href="/blog/2021-in-books/" target="_blank" rel="noopener noreferrer">2021 in books</a>._
+_A continuation from [2021 in books](/blog/2021-in-books/)._
 
 ### Best in Fiction
 #### [Malazan Book of The Fallen series](https://www.goodreads.com/series/43493-malazan-book-of-the-fallen)

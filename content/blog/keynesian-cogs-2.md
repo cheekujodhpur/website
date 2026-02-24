@@ -7,7 +7,7 @@ categories:
   - philosophy
 ---
 
-<a href="/blog/keynesian-cogs/" target="_blank" rel="noopener noreferrer">Part 1</a>
+[Part 1](/blog/keynesian-cogs/)
 
 #### Non-Keynesian Cogs
 I ended the previous essay by a declaration that gig workers are not Keynesian cogs, because their work is driven by an aspiration to rather become a Keynesian cog. They want money to afford healthcare and education for their children who may have to work less. Unlike Keynesian cogs, their purpose to work is to be able to work lesser in the future, or for their children and grandchildren to work less in the future.

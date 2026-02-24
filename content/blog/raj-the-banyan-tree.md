@@ -6,7 +6,7 @@ categories:
   - fiction
 ---
 
-_This is the first in a two-part series. This fictional narrative is designed to serve as an allegory to philosophies that we will discuss in the <a href="/blog/hyperreality/" target="_blank" rel="noopener noreferrer">next part</a>._
+_This is the first in a two-part series. This fictional narrative is designed to serve as an allegory to philosophies that we will discuss in the [next part](/blog/hyperreality/)._
 
 
 This is a story about Raj, a 1000-year-old banyan tree. Raj is no ordinary tree. Well, Raj has a trunk. The trunk has branches that have leaves. Five major branches radiate outward from the main trunk. There's perseverance in the north, exploration in the south, enlightenment in the west, prosperity in the east and unity in the northeast. Countless smaller branches spring out of these. They have their names, too. Journalists and politicians always have time for this stuff throughout history. And we have a lot of history.
