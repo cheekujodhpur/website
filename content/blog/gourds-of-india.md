@@ -59,13 +59,10 @@ Still, there is room to rediscover or perhaps invent a new identity
     list-style: none;
 }
 
-.gf-radio {
-    display: none;
-}
-
 .gourd-filter-btn {
-    display: inline-block;
+    appearance: none;
     background: transparent;
+    border: 0;
     border-radius: 3px;
     box-shadow: inset 0 0 0 2px #2e3842;
     color: #2e3842;
@@ -75,29 +72,19 @@ Still, there is room to rediscover or perhaps invent a new identity
     font-weight: 600;
     letter-spacing: 0.225em;
     text-transform: uppercase;
-    padding: 0.6em 1.4em;
+    padding: 0em 1.2em;
     transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     white-space: nowrap;
-    border-bottom: none;
 }
 
 .gourd-filter-btn:hover {
     background-color: rgba(46,56,66,0.1);
 }
 
-#gf-all:checked ~ .gourd-filters label[for="gf-all"],
-#gf-bottle:checked ~ .gourd-filters label[for="gf-bottle"],
-#gf-sponge:checked ~ .gourd-filters label[for="gf-sponge"],
-#gf-ridge:checked ~ .gourd-filters label[for="gf-ridge"] {
+.gourd-filter-btn.active {
     background-color: #2e3842;
     color: #fff;
     box-shadow: inset 0 0 0 2px #2e3842;
-}
-
-#gf-bottle:checked ~ .gourd-grid .gourd-card:not([data-gourds*="bottle-gourd"]),
-#gf-sponge:checked ~ .gourd-grid .gourd-card:not([data-gourds*="sponge-gourd"]),
-#gf-ridge:checked ~ .gourd-grid .gourd-card:not([data-gourds*="ridge-gourd"]) {
-    display: none;
 }
 
 .gourd-grid {
@@ -117,12 +104,11 @@ Still, there is room to rediscover or perhaps invent a new identity
     border: solid 2px #dfdfdf;
     border-radius: 3px;
     padding: 1.5em;
-    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.gourd-card h3 {
-    margin: 0 0 0.6em 0;
-}
+.gourd-card.hidden { display: none; }
+
+.gourd-card h3 { margin: 0 0 0.6em 0; }
 
 .gourd-tags {
     display: flex;
@@ -142,9 +128,13 @@ Still, there is room to rediscover or perhaps invent a new identity
     color: #fff;
 }
 
-.gourd-tag.bottle-gourd { background-color: #21b2a6; }
-.gourd-tag.sponge-gourd { background-color: #505393; }
-.gourd-tag.ridge-gourd  { background-color: #ed4933; }
+.gourd-tag.bottle-gourd  { background-color: #21b2a6; }
+.gourd-tag.sponge-gourd  { background-color: #505393; }
+.gourd-tag.ridge-gourd   { background-color: #ed4933; }
+.gourd-tag.bitter-gourd  { background-color: #b5651d; }
+.gourd-tag.pointed-gourd { background-color: #6a8e4e; }
+.gourd-tag.little-gourd  { background-color: #c2185b; }
+.gourd-tag.apple-gourd   { background-color: #7b1fa2; }
 
 .gourd-card .pair-label {
     font-size: 0.75em;
@@ -154,10 +144,7 @@ Still, there is room to rediscover or perhaps invent a new identity
     margin-bottom: 0.3em;
 }
 
-.gourd-card .pair-value {
-    font-weight: 600;
-    margin-bottom: 1em;
-}
+.gourd-card .pair-value { font-weight: 600; margin-bottom: 1em; }
 
 .gourd-card .description {
     margin-bottom: 1em;
@@ -199,56 +186,121 @@ Still, there is room to rediscover or perhaps invent a new identity
     background-color: rgba(46,56,66,0.1);
     border-color: #2e3842;
 }
-
 </style>
 
-<div class="gourd-container">
+<div id="gourdFilters" class="gourd-filters"></div>
+<div id="gourdGrid" class="gourd-grid"></div>
 
-<input type="radio" name="gf" id="gf-all" class="gf-radio" checked>
-<input type="radio" name="gf" id="gf-bottle" class="gf-radio">
-<input type="radio" name="gf" id="gf-sponge" class="gf-radio">
-<input type="radio" name="gf" id="gf-ridge" class="gf-radio">
+<script>
+// ============================================================
+// RECIPE DATA — add new recipes here, everything else is auto-generated
+// ============================================================
+var recipes = [
+    {
+        name: 'Nenua Kadala',
+        gourds: ['sponge-gourd', 'ridge-gourd'],
+        pairs: 'Kadala (Tyson black chickpea)',
+        desc: 'A dry-ish sabzi which you can have as a side to a rice based meal, or have with wheat chapati directly. Both kadala and nenua have an earthy aftertaste. The nenua adds a bit of sweetness if cooked tenderly, which balances the heat from the spices. A good balance of fiber and protein.',
+        tip: 'Cheeku recommends sponge gourd for this recipe. Ridge gourd has a thicker skin which can overpower the texture if not peeled carefully.',
+        links: [
+            ['Video recipe', 'https://www.youtube.com/watch?v=cc7EceYtIek'],
+            ["Archana's Kitchen", 'https://www.archanaskitchen.com/recipe/chana-turai-nenua-chana-sabzi-recipe-ridge-gourd-with-black-chana-recipe'],
+        ],
+    },
+    {
+        name: 'Lauki Chana Dal',
+        gourds: ['bottle-gourd'],
+        pairs: 'Chana Dal',
+        desc: "Perhaps one of the most common gourd recipes in India. Lauki is a good middle ground between cucumber and pumpkin. Good moisture content, more volume, and a thick skin so it doesn't rot fast. Its neutral texture makes it versatile enough even for desserts. Both lauki and chana dal go well with rice and bread, from dal tadka to dal fry.",
+        tip: 'Simple to cook: diced lauki with chana dal in a pressure cooker, then temper to taste.',
+        links: [],
+    },
+];
 
-<div class="gourd-filters">
-    <label for="gf-all" class="gourd-filter-btn">All</label>
-    <label for="gf-bottle" class="gourd-filter-btn">Bottle Gourd (Lauki)</label>
-    <label for="gf-sponge" class="gourd-filter-btn">Sponge Gourd (Nenua)</label>
-    <label for="gf-ridge" class="gourd-filter-btn">Ridge Gourd (Turai)</label>
-</div>
+// Gourd display names — add new gourds here as needed
+var gourdNames = {
+    'bottle-gourd':  'Bottle Gourd (Lauki)',
+    'sponge-gourd':  'Sponge Gourd (Nenua)',
+    'ridge-gourd':   'Ridge Gourd (Turai)',
+    'bitter-gourd':  'Bitter Gourd (Karela)',
+    'pointed-gourd': 'Pointed Gourd (Parval)',
+    'little-gourd':  'Little Gourd (Kundru)',
+    'apple-gourd':   'Apple Gourd (Tinda)',
+};
 
-<div class="gourd-grid">
+// ============================================================
+// Everything below is auto-generated from the data above
+// ============================================================
+(function() {
+    var filtersEl = document.getElementById('gourdFilters');
+    var gridEl = document.getElementById('gourdGrid');
 
-<div class="gourd-card" data-gourds="sponge-gourd ridge-gourd bottle-gourd">
-<h3>Nenua Kadala</h3>
-<div class="gourd-tags">
-    <span class="gourd-tag sponge-gourd">Sponge Gourd</span>
-    <span class="gourd-tag ridge-gourd">Ridge Gourd</span>
-</div>
-<div class="pair-label">Pairs with</div>
-<div class="pair-value">Kadala (Tyson black chickpea)</div>
-<div class="description">
-A dry-ish sabzi which you can have as a side to a rice based meal, or have with wheat chapati directly. Both kadala and nenua have an earthy aftertaste. The nenua adds a bit of sweetness if cooked tenderly, which balances the heat from the spices. A good balance of fiber and protein.
-</div>
-<div class="tip">Cheeku recommends sponge gourd for this recipe. Ridge gourd has a thicker skin which can overpower the texture if not peeled carefully.</div>
-<div class="recipe-links">
-    <a href="https://www.youtube.com/watch?v=cc7EceYtIek" target="_blank">Video recipe</a>
-    <a href="https://www.archanaskitchen.com/recipe/chana-turai-nenua-chana-sabzi-recipe-ridge-gourd-with-black-chana-recipe" target="_blank">Archana's Kitchen</a>
-</div>
-</div>
+    // Collect all gourd types used across recipes
+    var allGourds = [];
+    recipes.forEach(function(r) {
+        r.gourds.forEach(function(g) {
+            if (allGourds.indexOf(g) === -1) allGourds.push(g);
+        });
+    });
 
-<div class="gourd-card" data-gourds="bottle-gourd">
-<h3>Lauki Chana Dal</h3>
-<div class="gourd-tags">
-    <span class="gourd-tag bottle-gourd">Bottle Gourd</span>
-</div>
-<div class="pair-label">Pairs with</div>
-<div class="pair-value">Chana Dal</div>
-<div class="description">
-Perhaps one of the most common gourd recipes in India. Lauki is a good middle ground between cucumber and pumpkin. Good moisture content, more volume, and a thick skin so it doesn't rot fast. Its neutral texture makes it versatile enough even for desserts. Both lauki and chana dal go well with rice and bread, from dal tadka to dal fry.
-</div>
-<div class="tip">Simple to cook: diced lauki with chana dal in a pressure cooker, then temper to taste.</div>
-</div>
+    // Build filter buttons
+    var allBtn = document.createElement('button');
+    allBtn.className = 'gourd-filter-btn active';
+    allBtn.setAttribute('data-filter', 'all');
+    allBtn.textContent = 'All';
+    filtersEl.appendChild(allBtn);
 
-</div>
+    allGourds.forEach(function(g) {
+        var btn = document.createElement('button');
+        btn.className = 'gourd-filter-btn';
+        btn.setAttribute('data-filter', g);
+        btn.textContent = gourdNames[g] || g;
+        filtersEl.appendChild(btn);
+    });
 
-</div>
+    // Build recipe cards
+    recipes.forEach(function(r) {
+        var card = document.createElement('div');
+        card.className = 'gourd-card';
+        card.setAttribute('data-gourds', r.gourds.join(' '));
+
+        var html = '<h3>' + r.name + '</h3>';
+        html += '<div class="gourd-tags">';
+        r.gourds.forEach(function(g) {
+            html += '<span class="gourd-tag ' + g + '">' + (gourdNames[g] ? gourdNames[g].split(' (')[0] : g) + '</span>';
+        });
+        html += '</div>';
+        html += '<div class="pair-label">Pairs with</div>';
+        html += '<div class="pair-value">' + r.pairs + '</div>';
+        html += '<div class="description">' + r.desc + '</div>';
+        if (r.tip) html += '<div class="tip">' + r.tip + '</div>';
+        if (r.links && r.links.length) {
+            html += '<div class="recipe-links">';
+            r.links.forEach(function(l) {
+                html += '<a href="' + l[1] + '" target="_blank">' + l[0] + '</a>';
+            });
+            html += '</div>';
+        }
+        card.innerHTML = html;
+        gridEl.appendChild(card);
+    });
+
+    // Filter logic
+    var cards = gridEl.querySelectorAll('.gourd-card');
+    filtersEl.addEventListener('click', function(e) {
+        var btn = e.target.closest('.gourd-filter-btn');
+        if (!btn) return;
+        var filter = btn.getAttribute('data-filter');
+
+        filtersEl.querySelectorAll('.gourd-filter-btn').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+
+        cards.forEach(function(card) {
+            var gourds = card.getAttribute('data-gourds');
+            card.classList.toggle('hidden', filter !== 'all' && gourds.indexOf(filter) === -1);
+        });
+    });
+})();
+</script>

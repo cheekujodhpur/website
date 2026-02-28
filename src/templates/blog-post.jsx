@@ -75,9 +75,22 @@ const BlogPostTemplate = ({ data }) => {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    contentRef.current?.querySelectorAll('a').forEach((link) => {
+    const container = contentRef.current;
+    if (!container) return;
+
+    container.querySelectorAll('a').forEach((link) => {
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
+    });
+
+    // Execute inline script tags (innerHTML doesn't run them automatically)
+    container.querySelectorAll('script').forEach((oldScript) => {
+      const newScript = document.createElement('script');
+      Array.from(oldScript.attributes).forEach((attr) =>
+        newScript.setAttribute(attr.name, attr.value)
+      );
+      newScript.textContent = oldScript.textContent;
+      oldScript.parentNode.replaceChild(newScript, oldScript);
     });
   }, []);
 
