@@ -200,7 +200,6 @@ var recipes = [
     {
         name: 'Nenua Kadala',
         gourds: ['sponge-gourd', 'ridge-gourd'],
-        pairs: 'Kadala (Tyson black chickpea)',
         desc: 'A dry-ish sabzi which you can have as a side to a rice based meal, or have with wheat chapati directly. Both kadala and nenua have an earthy aftertaste. The nenua adds a bit of sweetness if cooked tenderly, which balances the heat from the spices. A good balance of fiber and protein.',
         tip: 'Cheeku recommends sponge gourd for this recipe. Ridge gourd has a thicker skin which can overpower the texture if not peeled carefully.',
         links: [
@@ -211,11 +210,17 @@ var recipes = [
     {
         name: 'Lauki Chana Dal',
         gourds: ['bottle-gourd'],
-        pairs: 'Chana Dal',
         desc: "Perhaps one of the most common gourd recipes in India. Lauki is a good middle ground between cucumber and pumpkin. Good moisture content, more volume, and a thick skin so it doesn't rot fast. Its neutral texture makes it versatile enough even for desserts. Both lauki and chana dal go well with rice and bread, from dal tadka to dal fry.",
         tip: 'Simple to cook: diced lauki with chana dal in a pressure cooker, then temper to taste.',
         links: [],
     },
+    {
+        name: 'Kapoor Kand',
+        gourds: ['bottle-gourd'],
+        desc: "This is a halwa that I first tried at a wedding in Bundelkhand region of India. It is essentially gajar halwa, but instead of carrots, you use bottle gourd. You also have petha made out of ash gourd, so it is quite natural to make desserts out of the bigger gourds. It has an even greater aesthetic appeal if you also serve gajar halwa. You get a red and green combo. I have not yet tried cooking it myself, but I think what I tasted was quite simple khoya and dry fruits halwa.",
+        tip: '',
+        links: [['YT Shorts', 'https://www.youtube.com/shorts/0P0f_mvTYo8']],
+    }
 ];
 
 // Gourd display names — add new gourds here as needed
@@ -276,8 +281,6 @@ var gourdNames = {
             html += '<span class="gourd-tag ' + g + '">' + (gourdNames[g] ? gourdNames[g].split(' (')[0] : g) + '</span>';
         });
         html += '</div>';
-        html += '<div class="pair-label">Pairs with</div>';
-        html += '<div class="pair-value">' + r.pairs + '</div>';
         html += '<div class="description">' + r.desc + '</div>';
         if (r.tip) html += '<div class="tip">' + r.tip + '</div>';
         if (r.links && r.links.length) {
