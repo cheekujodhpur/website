@@ -5,6 +5,10 @@ import GlobalStyles from './src/styles/GlobalStyles';
 
 import 'prismjs/themes/prism-tomorrow.css';
 
+export const onInitialClientRender = () => {
+  document.body.style.opacity = '1';
+};
+
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
