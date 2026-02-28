@@ -5,6 +5,7 @@ date: 2026-02-28T12:00:00.000Z
 categories:
   - food
 subtitle: Rediscovering the humble gourd, one recipe at a time
+collection: true
 ---
 
 What makes our palate? We grow up in different cultures.

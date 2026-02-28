@@ -6,6 +6,7 @@ categories:
   - travel
   - food
   - lifestyle
+collection: true
 ---
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css" />

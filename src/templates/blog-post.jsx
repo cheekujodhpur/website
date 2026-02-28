@@ -83,15 +83,34 @@ const BlogPostTemplate = ({ data }) => {
       link.setAttribute('rel', 'noopener noreferrer');
     });
 
-    // Execute inline script tags (innerHTML doesn't run them automatically)
-    container.querySelectorAll('script').forEach((oldScript) => {
-      const newScript = document.createElement('script');
-      Array.from(oldScript.attributes).forEach((attr) =>
-        newScript.setAttribute(attr.name, attr.value)
-      );
-      newScript.textContent = oldScript.textContent;
-      oldScript.parentNode.replaceChild(newScript, oldScript);
-    });
+    // Execute script tags (innerHTML doesn't run them automatically)
+    // External scripts must load sequentially before inline scripts run
+    const scripts = Array.from(container.querySelectorAll('script'));
+    const externalScripts = scripts.filter((s) => s.src);
+    const inlineScripts = scripts.filter((s) => !s.src);
+
+    const loadScript = (oldScript) =>
+      new Promise((resolve) => {
+        const newScript = document.createElement('script');
+        Array.from(oldScript.attributes).forEach((attr) =>
+          newScript.setAttribute(attr.name, attr.value)
+        );
+        newScript.removeAttribute('defer');
+        newScript.onload = resolve;
+        newScript.onerror = resolve;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+
+    (async () => {
+      for (const script of externalScripts) {
+        await loadScript(script);
+      }
+      inlineScripts.forEach((oldScript) => {
+        const newScript = document.createElement('script');
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+    })();
   }, []);
 
   return (

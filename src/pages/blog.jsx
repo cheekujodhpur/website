@@ -94,8 +94,40 @@ const Grid = styled.div`
   }
 `;
 
+const PostGrid = ({ posts }) => (
+  <Grid className="row">
+    {posts.map((post) => {
+      const url = post.frontmatter.exturl || post.fields.slug;
+      const isExternal = !!post.frontmatter.exturl;
+
+      return (
+        <div key={post.id}>
+          <header>
+            <h5>
+              {isExternal ? (
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {post.frontmatter.title}
+                </a>
+              ) : (
+                <Link to={url}>{post.frontmatter.title}</Link>
+              )}
+            </h5>
+            <p>
+              <i>{post.frontmatter.formattedDate}</i> -{' '}
+              {post.frontmatter.categories &&
+                post.frontmatter.categories.join(', ')}
+            </p>
+          </header>
+        </div>
+      );
+    })}
+  </Grid>
+);
+
 const BlogPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes;
+  const allPosts = data.allMarkdownRemark.nodes;
+  const collections = allPosts.filter((p) => p.frontmatter.collection);
+  const periodicals = allPosts.filter((p) => !p.frontmatter.collection);
 
   return (
     <Layout>
@@ -108,34 +140,15 @@ const BlogPage = ({ data }) => {
 
         <ContentWrapper className="wrapper style5">
           <div className="inner">
+            {collections.length > 0 && (
+              <section>
+                <h3>Collections</h3>
+                <PostGrid posts={collections} />
+              </section>
+            )}
             <section>
-              <Grid className="row">
-                {posts.map((post) => {
-                  const url = post.frontmatter.exturl || post.fields.slug;
-                  const isExternal = !!post.frontmatter.exturl;
-
-                  return (
-                    <div key={post.id}>
-                      <header>
-                        <h5>
-                          {isExternal ? (
-                            <a href={url} target="_blank" rel="noopener noreferrer">
-                              {post.frontmatter.title}
-                            </a>
-                          ) : (
-                            <Link to={url}>{post.frontmatter.title}</Link>
-                          )}
-                        </h5>
-                        <p>
-                          <i>{post.frontmatter.formattedDate}</i> -{' '}
-                          {post.frontmatter.categories &&
-                            post.frontmatter.categories.join(', ')}
-                        </p>
-                      </header>
-                    </div>
-                  );
-                })}
-              </Grid>
+              <h3>Periodicals</h3>
+              <PostGrid posts={periodicals} />
             </section>
           </div>
         </ContentWrapper>
@@ -160,6 +173,7 @@ export const query = graphql`
           formattedDate: date(formatString: "MMMM YYYY")
           categories
           exturl
+          collection
         }
       }
     }
