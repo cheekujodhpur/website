@@ -6,6 +6,7 @@ date: 2016-01-15T17:34:22.000Z
 categories:
   - astronomy
   - photometry
+mathjax: true
 image: /media/ngc2419-i.png
 weight: 120
 excerpt: "<p>\r\nMankind has a specific interest in exoplanets driven by the assumption that life can only originate and exist on planets. A detailed catalogue of RR Lyrae stars could help get information about the origin of the cluster, and we have an opportunity to detect microlensing(ML) events which indicate existence of exoplanets in the GC.\r\n</p>"

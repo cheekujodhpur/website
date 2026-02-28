@@ -71,7 +71,7 @@ const ContentWrapper = styled.section`
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
-  const { title, subtitle, date, image } = post.frontmatter;
+  const { title, subtitle, date, image, mathjax } = post.frontmatter;
   const contentRef = useRef(null);
 
   useEffect(() => {
@@ -119,6 +119,7 @@ const BlogPostTemplate = ({ data }) => {
         title={title}
         description={post.excerpt}
         pathname={post.fields.slug}
+        mathjax={mathjax}
       />
       <article id="main">
         <ContentWrapper className="wrapper style5">
@@ -153,6 +154,7 @@ export const query = graphql`
         subtitle
         date(formatString: "D MMMM YYYY")
         image
+        mathjax
       }
     }
   }

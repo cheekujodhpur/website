@@ -5,6 +5,7 @@ date: 2016-05-14T14:31:00.000Z
 categories:
   - misc
   - math
+mathjax: true
 ---
 
 <p>Did you know?<br />For every natural number N, there exists a circle enclosing exactly N lattice points!</p>

@@ -6,6 +6,7 @@ date: 2013-12-25T17:34:22.000Z
 categories:
   - high-energy-astrophysics
   - data-analysis
+mathjax: true
 image: /media/normax1.jpg
 weight: 105
 excerpt: "<p>We analyze spectral data from the Low-Mass X-Ray Binary 4U 1630-47 (X Nor X-1). This is a black hole candidate located at $\\alpha = 16^\\circ 34' 01.61” , δ = −47^\\circ 23' 34.8” $.</p>\r\n<p><i>Image credits: Wikipedia Commons</i></p>"

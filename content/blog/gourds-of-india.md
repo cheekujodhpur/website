@@ -236,6 +236,11 @@ var gourdNames = {
     var filtersEl = document.getElementById('gourdFilters');
     var gridEl = document.getElementById('gourdGrid');
 
+    // Clear any existing content (script may run twice: once from
+    // static HTML on initial page load, once from React hydration)
+    filtersEl.innerHTML = '';
+    gridEl.innerHTML = '';
+
     // Collect all gourd types used across recipes
     var allGourds = [];
     recipes.forEach(function(r) {
