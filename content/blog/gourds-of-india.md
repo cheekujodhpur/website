@@ -220,6 +220,13 @@ var recipes = [
         desc: "This is a halwa that I first tried at a wedding in Bundelkhand region of India. It is essentially gajar halwa, but instead of carrots, you use bottle gourd. You also have petha made out of ash gourd, so it is quite natural to make desserts out of the bigger gourds. It has an even greater aesthetic appeal if you also serve gajar halwa. You get a red and green combo. I have not yet tried cooking it myself, but I think what I tasted was quite simple khoya and dry fruits halwa.",
         tip: '',
         links: [['YT Shorts', 'https://www.youtube.com/shorts/0P0f_mvTYo8']],
+    },
+    {
+        name: 'Peerkangai Mangai Paruppu',
+        gourds: ['ridge-gourd'],
+        desc: "I accidentally ended up with only kairi and turai in my fridge, so I searched for a relevant recipe and got it in this link. I think the simple version works well, dump the dals and turai and kairi in a pressure cooker et voilà. It is a standard recipe with mango for tanginess instead of tomato or tamarind.",
+        tip: '',
+        links: [['Chitra Amma\'s Kitchen', 'https://chitra-ammas-kitchen.blogspot.com/2009/04/all-peerkangai-ridge-gourd-meal.html']],
     }
 ];
 
