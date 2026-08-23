@@ -4,6 +4,51 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
+const MainHeader = styled.header`
+  padding: 12em 0;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('${({ $image }) => $image}');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  h2 {
+    font-size: 1.75em;
+    margin: 0 0 0.5em 0;
+  }
+
+  p {
+    color: inherit;
+    letter-spacing: ${({ theme }) => theme.size.letterSpacingAlt};
+    text-transform: uppercase;
+    top: 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xlarge}) {
+    padding: 10em 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    padding: 8em 3em;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    padding: 10em 3em;
+    background-attachment: scroll;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    padding: 5em 3em;
+
+    h2 {
+      font-size: 1.25em;
+      margin: 0 0 1em 0;
+    }
+  }
+`;
+
 const ContentWrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.accent7.bg};
   color: ${({ theme }) => theme.colors.accent7.fg};
@@ -108,17 +153,18 @@ const ProjectPostTemplate = ({ data }) => {
         mathjax={mathjax}
       />
       <article id="main">
+        {image && (
+          <MainHeader $image={image}>
+            <h2>{title}</h2>
+            {subtitle && <p>{subtitle}</p>}
+            <p><em>{date}</em></p>
+          </MainHeader>
+        )}
         <ContentWrapper className="wrapper style5">
           <div className="inner">
-            {image && (
-              <span className="image left">
-                <img src={image} alt="" />
-              </span>
-            )}
-            <h2>{title}</h2>
-            {subtitle && <h3>{subtitle}</h3>}
-            <p><em>{date}</em></p>
-
+            {!image && <h2>{title}</h2>}
+            {!image && subtitle && <h3>{subtitle}</h3>}
+            {!image && <p><em>{date}</em></p>}
             <div ref={contentRef} dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
         </ContentWrapper>
