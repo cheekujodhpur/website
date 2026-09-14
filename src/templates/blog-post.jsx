@@ -19,6 +19,11 @@ const MainHeader = styled.header`
     margin: 0 0 0.5em 0;
   }
 
+  h2:lang(hi) {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
   p {
     color: inherit;
     letter-spacing: ${({ theme }) => theme.size.letterSpacingAlt};
@@ -56,6 +61,11 @@ const ContentWrapper = styled.section`
 
   strong, b, h2, h3, h4, h5, h6 {
     color: ${({ theme }) => theme.colors.accent7.fgBold};
+  }
+
+  :lang(hi) {
+    letter-spacing: 0;
+    text-transform: none;
   }
 
   header p {
@@ -116,7 +126,7 @@ const ContentWrapper = styled.section`
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
-  const { title, subtitle, date, image, mathjax } = post.frontmatter;
+  const { title, subtitle, date, image, mathjax, lang } = post.frontmatter;
   const contentRef = useRef(null);
 
   useEffect(() => {
@@ -166,17 +176,17 @@ const BlogPostTemplate = ({ data }) => {
         pathname={post.fields.slug}
         mathjax={mathjax}
       />
-      <article id="main">
+      <article id="main" lang={lang}>
         {image && (
           <MainHeader $image={image}>
-            <h2>{title}</h2>
+            <h2 lang={lang}>{title}</h2>
             {subtitle && <p>{subtitle}</p>}
             <p><em>{date}</em></p>
           </MainHeader>
         )}
         <ContentWrapper className="wrapper style5">
           <div className="inner">
-            {!image && <h2>{title}</h2>}
+            {!image && <h2 lang={lang}>{title}</h2>}
             {!image && subtitle && <h3>{subtitle}</h3>}
             {!image && <p><em>{date}</em></p>}
             <div ref={contentRef} dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -201,6 +211,7 @@ export const query = graphql`
         date(formatString: "D MMMM YYYY")
         image
         mathjax
+        lang
       }
     }
   }

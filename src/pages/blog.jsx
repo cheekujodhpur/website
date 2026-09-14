@@ -60,6 +60,11 @@ const ContentWrapper = styled.section`
     color: ${({ theme }) => theme.colors.accent7.fgBold};
   }
 
+  h5:lang(hi) {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
   header p {
     color: ${({ theme }) => theme.colors.accent7.fgLight};
   }
@@ -103,7 +108,7 @@ const PostGrid = ({ posts }) => (
       return (
         <div key={post.id}>
           <header>
-            <h5>
+            <h5 lang={post.frontmatter.lang}>
               {isExternal ? (
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   {post.frontmatter.title}
@@ -174,6 +179,7 @@ export const query = graphql`
           categories
           exturl
           collection
+          lang
         }
       }
     }
