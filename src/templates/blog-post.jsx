@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import SubscribeForm from '../components/SubscribeForm';
 
 const MainHeader = styled.header`
   padding: 12em 0;
@@ -192,6 +193,7 @@ const BlogPostTemplate = ({ data }) => {
             <div ref={contentRef} dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
         </ContentWrapper>
+        <SubscribeForm />
       </article>
     </Layout>
   );

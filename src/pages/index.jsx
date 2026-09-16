@@ -229,17 +229,12 @@ const spotlights = [
   {
     image: '/images/me_tinker.jpg',
     title: 'Tinkerer',
-    content: 'I do try to try tonnes of funny ideas.',
-    link: '/projects/',
-    linkText: 'Projects',
+    content: 'I am privileged to have the luxury of failing at various things.',
   },
   {
     image: '/images/me_emily.jpg',
     title: 'Artist',
-    content:
-      'You can taste my cooking on invitation, you may not want to hear my music, but you are welcome to read my writing.',
-    link: '/blog/',
-    linkText: 'Blog',
+    content: 'I think I am one, therefore I am one.',
   },
   {
     image: '/images/me_server.jpg',
@@ -291,14 +286,18 @@ const IndexPage = ({ data }) => {
             <h2>To the first order of approximation</h2>
             <p>
               I have an undergraduate degree in physics with a minor in computer
-              science. Since then, I have spent a few years using these skills to
-              build data science pipelines for financial trading. And then there
-              are higher order residuals of myself...
+              science. Since then, I have spent almost a decade applying these
+              skills in financial markets. And then there are higher order
+              residuals of myself...
             </p>
             <p>
-              <a href="mailto:cheekujodhpur@gmail.com" className="button fit">
-                Hello Ayush!
-              </a>
+              I like to eat a lot, and I cook a bit. I like to read a lot, and
+              I write a bit. You may enjoy reading my blog.
+            </p>
+            <p>
+              <Link to="/blog/" className="button">Blog</Link>{' '}
+              <Link to="/projects/" className="button">Projects</Link>{' '}
+              <Link to="/newsletter/" className="button special">Subscribe</Link>
             </p>
           </header>
         </div>

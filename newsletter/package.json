@@ -1,0 +1,14 @@
+{
+  "name": "newsletter",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.600.0",
+    "@aws-sdk/lib-dynamodb": "^3.600.0",
+    "@aws-sdk/client-ses": "^3.600.0",
+    "@aws-sdk/client-ssm": "^3.600.0",
+    "html-to-text": "^9.0.5",
+    "rss-parser": "^3.13.0",
+    "uuid": "^9.0.1"
+  }
+}

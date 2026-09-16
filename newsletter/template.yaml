@@ -1,0 +1,204 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Newsletter system for kumar-ayush.com
+
+Globals:
+  Function:
+    Runtime: nodejs20.x
+    Timeout: 30
+    MemorySize: 128
+    Environment:
+      Variables:
+        SUBSCRIBERS_TABLE: !Ref SubscribersTable
+        SENT_ISSUES_TABLE: !Ref SentIssuesTable
+
+Parameters:
+  Stage:
+    Type: String
+    Default: prod
+
+Resources:
+
+  # ── DynamoDB ──────────────────────────────────────────────────────────────
+
+  SubscribersTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    Properties:
+      TableName: !Sub newsletter-subscribers-${Stage}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: email
+          AttributeType: S
+        - AttributeName: confirmation_token
+          AttributeType: S
+        - AttributeName: unsubscribe_token
+          AttributeType: S
+      KeySchema:
+        - AttributeName: email
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: ConfirmationTokenIndex
+          KeySchema:
+            - AttributeName: confirmation_token
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: UnsubscribeTokenIndex
+          KeySchema:
+            - AttributeName: unsubscribe_token
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+
+  SentIssuesTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    Properties:
+      TableName: !Sub newsletter-sent-issues-${Stage}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: guid
+          AttributeType: S
+      KeySchema:
+        - AttributeName: guid
+          KeyType: HASH
+
+  # ── API Gateway ───────────────────────────────────────────────────────────
+
+  NewsletterApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: !Ref Stage
+      Cors:
+        AllowMethods: "'GET,POST,OPTIONS'"
+        AllowHeaders: "'Content-Type'"
+        AllowOrigin: "'https://kumar-ayush.com'"
+
+  # ── Lambda functions ──────────────────────────────────────────────────────
+
+  SubscribeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/subscribe.handler
+      CodeUri: ./
+      Description: Accept new subscription requests and send confirmation email
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SubscribersTable
+        - Statement:
+            - Effect: Allow
+              Action: [ses:SendEmail, ses:SendRawEmail]
+              Resource: '*'
+            - Effect: Allow
+              Action: ssm:GetParameter
+              Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            RestApiId: !Ref NewsletterApi
+            Path: /subscribe
+            Method: POST
+
+  ConfirmFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/confirm.handler
+      CodeUri: ./
+      Description: Activate subscriber after email confirmation click
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SubscribersTable
+        - Statement:
+            - Effect: Allow
+              Action: [ses:SendEmail, ses:SendRawEmail]
+              Resource: '*'
+            - Effect: Allow
+              Action: ssm:GetParameter
+              Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            RestApiId: !Ref NewsletterApi
+            Path: /confirm
+            Method: GET
+
+  UnsubscribeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/unsubscribe.handler
+      CodeUri: ./
+      Description: Mark subscriber as unsubscribed
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SubscribersTable
+        - Statement:
+            - Effect: Allow
+              Action: ssm:GetParameter
+              Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            RestApiId: !Ref NewsletterApi
+            Path: /unsubscribe
+            Method: GET
+
+  SendFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/send.handler
+      CodeUri: ./
+      Timeout: 300
+      Description: Check RSS feed daily and email confirmed subscribers about new posts
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SubscribersTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SentIssuesTable
+        - Statement:
+            - Effect: Allow
+              Action: [ses:SendEmail, ses:SendRawEmail]
+              Resource: '*'
+            - Effect: Allow
+              Action: ssm:GetParameter
+              Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
+      Events:
+        DailyCron:
+          Type: Schedule
+          Properties:
+            Schedule: cron(30 8 * * ? *)
+            Description: Daily at 2pm IST (8:30am UTC)
+            Enabled: true
+
+  BouncesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/bounces.handler
+      CodeUri: ./
+      Description: Auto-unsubscribe hard bounces and spam complaints from SES
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SubscribersTable
+      Events:
+        SNS:
+          Type: SNS
+          Properties:
+            Topic: !Ref BouncesTopic
+
+  # ── SNS topic for SES bounce/complaint notifications ─────────────────────
+
+  BouncesTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub newsletter-bounces-${Stage}
+
+Outputs:
+  ApiUrl:
+    Description: Set this as GATSBY_NEWSLETTER_API_URL in your Gatsby build
+    Value: !Sub 'https://${NewsletterApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}'
+  BouncesTopicArn:
+    Description: Configure this ARN in SES Identity > Notifications for bounces and complaints
+    Value: !Ref BouncesTopic

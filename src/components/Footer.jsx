@@ -73,6 +73,7 @@ const Footer = () => {
       site {
         siteMetadata {
           title
+          email
           social {
             name
             icon
@@ -83,7 +84,7 @@ const Footer = () => {
     }
   `);
 
-  const { social, title } = data.site.siteMetadata;
+  const { social, title, email } = data.site.siteMetadata;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -104,6 +105,7 @@ const Footer = () => {
       </ul>
       <ul className="copyright">
         <li>&copy; {currentYear} {title}</li>
+        <li><a href={`mailto:${email}`}>{email}</a></li>
         <li>
           Design: <a href="http://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>
         </li>
