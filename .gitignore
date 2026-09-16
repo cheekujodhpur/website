@@ -3,4 +3,6 @@ node_modules/
 public/
 .env*
 *.log
+newsletter/email-preview.html
+newsletter-plan.md
 .claude/

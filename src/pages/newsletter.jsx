@@ -33,6 +33,16 @@ const Wrapper = styled.section`
   a {
     color: ${({ theme }) => theme.colors.accent1.bg};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    h2 {
+      font-size: 1.25em;
+    }
+
+    .inner {
+      padding: 3em 2em;
+    }
+  }
 `;
 
 const STATES = {
