@@ -19,6 +19,8 @@ function buildEmailHtml(item, siteUrl, unsubUrl) {
     <div style="margin-top:48px;padding-top:16px;border-top:1px solid #eeeeee;font-size:11px;color:#aaaaaa;">
       <a href="${siteUrl}/blog/" style="color:#aaaaaa;">More posts</a>
       &nbsp;·&nbsp;
+      <a href="${siteUrl}/newsletter/" style="color:#aaaaaa;">Subscribe</a>
+      &nbsp;·&nbsp;
       <a href="${unsubUrl}" style="color:#aaaaaa;">Unsubscribe</a>
     </div>
   </div>
