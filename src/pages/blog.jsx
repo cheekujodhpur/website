@@ -131,8 +131,8 @@ const PostGrid = ({ posts }) => (
 
 const BlogPage = ({ data }) => {
   const allPosts = data.allMarkdownRemark.nodes;
-  const collections = allPosts.filter((p) => p.frontmatter.collection);
-  const periodicals = allPosts.filter((p) => !p.frontmatter.collection);
+  const collections = allPosts.filter((p) => p.frontmatter.collection && p.frontmatter.show_on_web !== false);
+  const periodicals = allPosts.filter((p) => !p.frontmatter.collection && p.frontmatter.show_on_web !== false);
 
   return (
     <Layout>
@@ -179,6 +179,7 @@ export const query = graphql`
           categories
           exturl
           collection
+          show_on_web
           lang
         }
       }

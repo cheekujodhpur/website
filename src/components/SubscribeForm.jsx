@@ -76,8 +76,8 @@ const Button = styled.button`
   font-family: ${({ theme }) => theme.fonts.family};
   font-size: 0.8em;
   font-weight: ${({ theme }) => theme.fonts.weightBold};
-  height: ${({ theme }) => theme.size.elementHeight};
-  line-height: ${({ theme }) => theme.size.elementHeight};
+  display: flex;
+  align-items: center;
   letter-spacing: ${({ theme }) => theme.size.letterSpacingAlt};
   padding: 0 1.5em;
   text-transform: uppercase;

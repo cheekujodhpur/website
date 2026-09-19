@@ -27,6 +27,7 @@ exports.handler = async (event) => {
   ]);
 
   const feed = await parser.parseURL(rssUrl);
+  let sent = null;
 
   // Process newest-first; stop after sending one to avoid batching multiple posts
   const startMs = new Date(startDate).getTime();
@@ -49,6 +50,7 @@ exports.handler = async (event) => {
       ExpressionAttributeValues: { ':confirmed': 'confirmed' },
     }));
 
+    sent = item.title;
     console.log(`Sending "${item.title}" to ${subscribers.length} subscribers`);
 
     for (const subscriber of subscribers) {
@@ -91,4 +93,6 @@ exports.handler = async (event) => {
 
     break; // one post per run
   }
+
+  return sent ? { sent } : { sent: null, message: 'No new posts to send.' };
 };

@@ -24,7 +24,11 @@ categories: ["category"]
 ---
 ```
 
-The RSS feed at `/feed.xml` is updated automatically on deploy (latest 10 posts). The newsletter system polls this feed daily to detect new posts.
+The RSS feed at `/feed.xml` is updated automatically on deploy (latest 10 posts). A separate `/newsletter-feed.xml` is used by the newsletter system — it includes email-only posts and excludes posts with `email: false` in frontmatter.
+
+Optional frontmatter fields:
+- `send_email: false` — publish to blog but skip this post in the newsletter
+- `show_on_web: false` — send to newsletter subscribers only; no public blog page or URL
 
 ## Newsletter
 
@@ -35,7 +39,7 @@ The newsletter backend lives in `newsletter/` and is deployed separately as an A
 - **Subscribe** — API Gateway → `subscribe` Lambda → DynamoDB (status: `pending`) → SES confirmation email
 - **Confirm** — link in confirmation email → `confirm` Lambda → DynamoDB (status: `confirmed`) → SES welcome email
 - **Unsubscribe** — link in every sent email → `unsubscribe` Lambda → DynamoDB (status: `unsubscribed`)
-- **Send** — EventBridge cron (daily, 8:30 UTC) → `send` Lambda → reads RSS feed → sends to confirmed subscribers → records guid in `newsletter-sent-issues-prod` to avoid duplicates
+- **Send** — manually triggered → `send` Lambda → reads `/newsletter-feed.xml` → sends to confirmed subscribers → records guid in `newsletter-sent-issues-prod` to avoid duplicates
 - **Bounces** — SES → SNS → `bounces` Lambda → hard bounces marked as `bounced`, complaints marked as `unsubscribed`
 
 ### Deploying the newsletter stack
@@ -55,6 +59,16 @@ One-time: create Parameter Store entries before first deploy:
 ```bash
 python newsletter/scripts/setup-params.py
 ```
+
+### Sending the newsletter
+
+To trigger a send manually:
+
+```bash
+bash newsletter/scripts/trigger-send.sh
+```
+
+This invokes the `send` Lambda, which picks up the next unsent post from `/newsletter-feed.xml` (posts newer than `start-date` in Parameter Store, not yet in `newsletter-sent-issues-prod`). One post per invocation.
 
 ### Subscriber management
 

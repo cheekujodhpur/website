@@ -12,7 +12,7 @@ REGION = 'ap-south-1'
 PARAMS = [
     ('/newsletter/site-url',   'https://kumar-ayush.com'),
     ('/newsletter/api-url',    'https://xkrfcpc4h5.execute-api.ap-south-1.amazonaws.com/prod'),
-    ('/newsletter/rss-url',    'https://kumar-ayush.com/feed.xml'),
+    ('/newsletter/rss-url',    'https://kumar-ayush.com/newsletter-feed.xml'),
     ('/newsletter/from-email', 'newsletter@kumar-ayush.com'),
     ('/newsletter/start-date', datetime.date.today().isoformat()),
 ]

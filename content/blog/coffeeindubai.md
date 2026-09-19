@@ -7,6 +7,7 @@ categories:
   - food
   - lifestyle
 collection: true
+send_email: false
 ---
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css" />

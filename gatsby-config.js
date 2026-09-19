@@ -103,7 +103,10 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  filter: { fields: { collection: { eq: "blog" } } }
+                  filter: {
+                    fields: { collection: { eq: "blog" } }
+                    frontmatter: { show_on_web: { ne: false } }
+                  }
                   sort: { frontmatter: { date: DESC } }
                   limit: 10
                 ) {
@@ -121,6 +124,41 @@ module.exports = {
             `,
             output: '/feed.xml',
             title: "Kumar Ayush' Blog",
+          },
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map((node) => ({
+                title: node.frontmatter.title,
+                description: node.excerpt,
+                date: node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + node.fields.slug,
+                guid: site.siteMetadata.siteUrl + node.fields.slug,
+                custom_elements: [{ 'content:encoded': node.html }],
+              }));
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  filter: {
+                    fields: { collection: { eq: "blog" } }
+                    frontmatter: { send_email: { ne: false } }
+                  }
+                  sort: { frontmatter: { date: DESC } }
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/newsletter-feed.xml',
+            title: "Kumar Ayush Newsletter",
           },
         ],
       },

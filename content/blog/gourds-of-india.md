@@ -6,6 +6,7 @@ categories:
   - food
 subtitle: Rediscovering the humble gourd, one recipe at a time
 collection: true
+send_email: false
 ---
 
 What makes our palate? We grow up in different cultures.

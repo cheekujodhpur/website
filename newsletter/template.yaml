@@ -4,7 +4,7 @@ Description: Newsletter system for kumar-ayush.com
 
 Globals:
   Function:
-    Runtime: nodejs20.x
+    Runtime: nodejs24.x
     Timeout: 30
     MemorySize: 128
     Environment:
@@ -165,13 +165,7 @@ Resources:
             - Effect: Allow
               Action: ssm:GetParameter
               Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
-      Events:
-        DailyCron:
-          Type: Schedule
-          Properties:
-            Schedule: cron(30 8 * * ? *)
-            Description: Daily at 2pm IST (8:30am UTC)
-            Enabled: true
+      Events: {}
 
   BouncesFunction:
     Type: AWS::Serverless::Function

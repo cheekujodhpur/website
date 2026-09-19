@@ -1,6 +1,15 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type MarkdownRemarkFrontmatter {
+      show_on_web: Boolean
+      send_email: Boolean
+    }
+  `);
+};
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -44,6 +53,9 @@ exports.createPages = async ({ graphql, actions }) => {
             slug
             collection
           }
+          frontmatter {
+            show_on_web
+          }
         }
       }
     }
@@ -54,6 +66,8 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   result.data.allMarkdownRemark.nodes.forEach((node) => {
+    if (node.frontmatter.show_on_web === false) return;
+
     const template =
       node.fields.collection === 'blog'
         ? './src/templates/blog-post.jsx'
