@@ -23,12 +23,5 @@ aws lambda invoke \
   --region "$REGION" \
   /tmp/send-response.json > /dev/null
 
-RESULT=$(cat /tmp/send-response.json)
-if [ "$RESULT" = "null" ] || echo "$RESULT" | grep -q '"No new posts'; then
-  echo "Nothing to send."
-elif echo "$RESULT" | grep -q '"sent"'; then
-  TITLE=$(echo "$RESULT" | grep -o '"sent":"[^"]*"' | cut -d'"' -f4)
-  echo "Sent: $TITLE"
-else
-  echo "$RESULT"
-fi
+cat /tmp/send-response.json
+echo
