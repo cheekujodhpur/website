@@ -74,6 +74,19 @@ This invokes the `send` Lambda, which picks up the next unsent post from `/newsl
 
 Subscribers are stored in DynamoDB table `newsletter-subscribers-prod`. Manage directly via the AWS console (DynamoDB → Explore items). Status values: `pending`, `confirmed`, `unsubscribed`, `bounced`.
 
+### CloudFront invalidation
+
+After deploying, invalidate CloudFront if needed (e.g. if an existing feed file was updated):
+
+```bash
+aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+```
+
+New files (like `/newsletter-feed.xml` on first deploy) don't need invalidation — CloudFront passes through to S3 on first request.
+
 ### Environment variables
 
-`GATSBY_NEWSLETTER_API_URL` must be set at Gatsby build time. Lives in `.env.production` (gitignored).
+`.env.production` (gitignored) holds local config needed for deployment:
+
+- `GATSBY_NEWSLETTER_API_URL` — baked into the Gatsby build at deploy time
+- `CLOUDFRONT_DISTRIBUTION_ID` — used for cache invalidation commands
