@@ -14,6 +14,8 @@ We are the literal embodiment of scholars locked far away in a tower doing arcan
 
 This is a public-private photo album of products we trade found in the wild, and a little blurb about them. You ask why? Because this is art.
 
+_Pictures are contributed by Ayush and Maxime_
+
 <style>
 .bestiary-grid {
   display: grid;
@@ -66,5 +68,13 @@ This is a public-private photo album of products we trade found in the wild, and
   <figure class="bestiary-item">
     <img src="/images/stock-bestiary/alcon.jpg" alt="Alcon" style="object-position: bottom right;">
     <figcaption><b>Alcon (ALC)</b> swiss pharma</figcaption>
+  </figure>
+  <figure class="bestiary-item">
+    <img src="/images/stock-bestiary/beiersdorf.jpeg" alt="Beiersdorf">
+    <figcaption><b>Beiersdorf (BDRFY)</b> easier to say - the Nivea company</figcaption>
+  </figure>
+  <figure class="bestiary-item">
+    <img src="/images/stock-bestiary/unilever.jpeg" alt="Unilever">
+    <figcaption><b>Unilever (UL)</b> the ancient and famous one</figcaption>
   </figure>
 </div>
