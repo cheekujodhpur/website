@@ -73,7 +73,7 @@ Resources:
       Cors:
         AllowMethods: "'GET,POST,OPTIONS'"
         AllowHeaders: "'Content-Type'"
-        AllowOrigin: "'https://kumar-ayush.com'"
+        AllowOrigin: "'*'"
 
   # ── Lambda functions ──────────────────────────────────────────────────────
 
@@ -166,6 +166,44 @@ Resources:
               Action: ssm:GetParameter
               Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
       Events: {}
+
+  RazorpayCreateOrderFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/razorpay-create-order.handler
+      CodeUri: ./
+      Description: Create a Razorpay order for tip payments
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action: ssm:GetParameter
+              Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            RestApiId: !Ref NewsletterApi
+            Path: /tip/create-order
+            Method: POST
+
+  RazorpayVerifyPaymentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/razorpay-verify-payment.handler
+      CodeUri: ./
+      Description: Verify Razorpay payment signature after checkout
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action: ssm:GetParameter
+              Resource: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/newsletter/*'
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            RestApiId: !Ref NewsletterApi
+            Path: /tip/verify-payment
+            Method: POST
 
   BouncesFunction:
     Type: AWS::Serverless::Function

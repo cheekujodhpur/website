@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import SubscribeForm from '../components/SubscribeForm';
+import TipWidget from '../components/TipWidget';
 
 const MainHeader = styled.header`
   padding: 12em 0;
@@ -194,6 +195,7 @@ const BlogPostTemplate = ({ data }) => {
           </div>
         </ContentWrapper>
         <SubscribeForm />
+        <TipWidget />
       </article>
     </Layout>
   );

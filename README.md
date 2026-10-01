@@ -10,7 +10,7 @@ make             # build and deploy to production (S3)
 make clean       # clear Gatsby cache
 ```
 
-Local dev mocks the newsletter subscribe API — no real emails are sent.
+Local dev mocks the newsletter subscribe API and Razorpay checkout — no real emails or payments are processed.
 
 ## Adding a blog post
 
@@ -29,6 +29,10 @@ The RSS feed at `/feed.xml` is updated automatically on deploy (latest 10 posts)
 Optional frontmatter fields:
 - `send_email: false` — publish to blog but skip this post in the newsletter
 - `show_on_web: false` — send to newsletter subscribers only; no public blog page or URL
+
+## Tips (Razorpay)
+
+Each blog post has a tip widget (above the subscribe form). Client-side only — no backend required. Set `GATSBY_RAZORPAY_KEY_ID` in `.env.production` to activate.
 
 ## Newsletter
 
@@ -69,24 +73,3 @@ bash newsletter/scripts/trigger-send.sh
 ```
 
 This invokes the `send` Lambda, which picks up the next unsent post from `/newsletter-feed.xml` (posts newer than `start-date` in Parameter Store, not yet in `newsletter-sent-issues-prod`). One post per invocation.
-
-### Subscriber management
-
-Subscribers are stored in DynamoDB table `newsletter-subscribers-prod`. Manage directly via the AWS console (DynamoDB → Explore items). Status values: `pending`, `confirmed`, `unsubscribed`, `bounced`.
-
-### CloudFront invalidation
-
-After deploying, invalidate CloudFront if needed (e.g. if an existing feed file was updated):
-
-```bash
-aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
-```
-
-New files (like `/newsletter-feed.xml` on first deploy) don't need invalidation — CloudFront passes through to S3 on first request.
-
-### Environment variables
-
-`.env.production` (gitignored) holds local config needed for deployment:
-
-- `GATSBY_NEWSLETTER_API_URL` — baked into the Gatsby build at deploy time
-- `CLOUDFRONT_DISTRIBUTION_ID` — used for cache invalidation commands
