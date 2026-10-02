@@ -2,7 +2,10 @@ function buildEmailHtml(item, siteUrl, unsubUrl) {
   const date = new Date(item.pubDate).toLocaleDateString('en-IN', {
     year: 'numeric', month: 'long', day: 'numeric',
   });
-  const content = item['content:encoded'] || item.content || item.contentSnippet || '';
+  const rawContent = item['content:encoded'] || item.content || item.contentSnippet || '';
+  const content = rawContent
+    .replace(/src="\//g, `src="${siteUrl}/`)
+    .replace(/href="\//g, `href="${siteUrl}/`);
 
   return `<!DOCTYPE html>
 <html lang="en">
