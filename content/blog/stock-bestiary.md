@@ -77,4 +77,8 @@ _Pictures are contributed by Ayush and Maxime_
     <img src="/images/stock-bestiary/unilever.jpeg" alt="Unilever">
     <figcaption><b>Unilever (UL)</b> the ancient and famous one</figcaption>
   </figure>
+  <figure class="bestiary-item">
+    <img src="/images/stock-bestiary/abb.jpeg" alt="ABB">
+    <figcaption><b>ABB (ABBNY)</b> makes electrical things</figcaption>
+  </figure>
 </div>
