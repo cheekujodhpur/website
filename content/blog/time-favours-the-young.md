@@ -1,0 +1,26 @@
+---
+layout: blog
+title: In the end, time forever favours the young
+date: 2026-10-12T00:00:00.000Z
+categories:
+  - musings
+  - current
+---
+
+I am writing this on the morning of 12th October 2026. This is in the wake of what I will term the dawn of another freedom movement for India. In middle school, we are told that the reigning Constitution of India was enacted in 1950. We were under the dominion of the British Crown until 1947. There are three branches of the government which keep each other in check - legislative, executive and judiciary. The legislative is an elected body, which makes us an electoral representative democracy. We have fundamental rights, but also fundamental duties. And so on and so forth.
+
+There are tomes of more technical details and salient features of our political system that we are taught early in the ripe age of 13 or so. I don't remember most of it. Never thought I would need it. Also, I *should not* need most of it because the Constitution is essentially a contract between the citizens and the state. And as any seasoned businessperson will tell you, if you have reached the point of having to read the contract, your relationship is already in troubled waters.
+
+However I do remember an interesting framework by virtue of having a charismatic social science teacher who liked to go beyond the curriculum. We are a simultaneous member of several communities, several groups. I am an Indian. I am an Engineer. My mother tongue is Hindi. I am a caffeine addict. And politics is a struggle between two groups - those who are in power, and those who are not in power. The other group memberships are largely irrelevant, as history will tell you. Having the same religion as my opposition is not going to limit their tactics against me. Sharing the same language does not guarantee understanding.
+
+Within this framework, those who are in power - the BJP and communities that may have benefited from their governance over the past decade are up against those not in power - the electoral opposition and the communities that have definitely not benefited from their governance over the past decade. Those in power set the rules of engagement.
+
+The decision to not entertain the concerns regarding the Election Commission in parliament was the government's. The decision to not allow a peaceful protest at Jantar Mantar about the matter was the government's. The decision to have police barricades and detain certain members among those not in power was also the government's. Many news articles about these events have a vocabulary to say "even journalists and lawyers" were detained. And hence, this is more akin to a freedom movement than a protest about a governance concern. The rules of the conflict and hence its resolutions are set by the group in power. And those in power have determined that the ones not in power do not have space to stand as equals on the playground. They have chosen their role as an authoritarian state defending their regime. Thus, the game shall be that of dismantling that regime.
+
+In such a game, the protestors have a clear winning strategy of civil disobedience. This was demonstrated by the legendary player MK Gandhi in the early 20th century against the British Government of India. The British held a moral high ground of civility over the uncivilised Indians. That meant that catching them in an immoral act as per their own rules was an easy act. India's freedom movement was won by journalists and lawyers, documenting the wrongs of the British government to the public and demanding concessions in their Court.
+
+I believe it is easier to predict broad checkpoints than the dynamics of how we get there. First, those not in power belong to a notable social community - the youth. In this frame, anti-establishmentarianism is a global phenomenon. In the end, time forever favours the young. The protestors have much more time on their hands to wage their battles and much less to lose. In contrast, those in power are old. Old leaders tend to be desperate. It is not easy to leave this world behind for the young. One wishes to leave a legacy behind. They have less time to secure their goals. This desperation makes the path ahead extremely volatile. There is potential for unlimited violence and atrocities before those not in power gain concessions.
+
+Meanwhile, those in power still reserve the option to change the rules of engagement. They can simply choose to be an autocracy, and then those not in power have to play the role of even more violent revolutionaries. Rather, British India had some of those as well. The East India Company played with vastly different rules of engagement than the British crown, and there too different regimes had their own flavours. I do not foresee this as a likely outcome in modern India. There are too many old leaders, I doubt they can agree on this among them. I have a bit of irrational faith in the path that the founders of our nation set us on. All arms of our state can be greedy and crooked, but each shall have enough power to keep them from colluding.
+
+It is quite an irony that I often visualise such events in the history of our country as a lotus rising from mud. There are faces in the mud. There is a horror to this scene. This is all just so horrible. But we shall witness now. Satyamev Jayate.
