@@ -61,6 +61,7 @@ exports.handler = async (event) => {
       const boundary = `----=_Part_${Date.now()}`;
       const rawEmail = [
         `From: Kumar Ayush <${fromEmail}>`,
+        `Reply-To: Kumar Ayush <cheekujodhpur@gmail.com>`,
         `To: ${subscriber.email}`,
         `Subject: ${item.title}`,
         `MIME-Version: 1.0`,
