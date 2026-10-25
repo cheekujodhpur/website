@@ -85,4 +85,8 @@ _Pictures are contributed by Ayush and Maxime_
     <img src="/images/stock-bestiary/schneider.jpeg" alt="Schneider">
     <figcaption><b>Schneider (SBGSY)</b> also makes electrical things</figcaption>
   </figure>
+  <figure class="bestiary-item">
+    <img src="/images/stock-bestiary/assa-abloy.jpeg" alt="Schneider">
+    <figcaption><b>Assa Abloy (ASAZY)</b> Swedish security firm - locks, door automation and such</figcaption>
+  </figure>
 </div>
