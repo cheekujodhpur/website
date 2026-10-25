@@ -3,7 +3,6 @@ layout: blog
 title: Circle enclosing N lattice points
 date: 2016-05-14T14:31:00.000Z
 categories:
-  - misc
   - math
 mathjax: true
 ---

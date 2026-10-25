@@ -3,7 +3,7 @@ layout: blog
 title: Undergrad Memoir
 date: 2019-07-12T11:08:00.000Z
 categories:
-  - misc
+  - memoir
 ---
 
 <p><i>The following article was written for and published in Physics Depart Newsletter at IIT Bombay. Requested and edited by Toshi Parmar. Co-authored by Sandesh Kalantre</i></p>

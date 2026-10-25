@@ -3,7 +3,7 @@ layout: blog
 title: The Essence of Monte Carlo
 date: 2018-06-10T22:51:00.000Z
 categories:
-  - misc
+  - math
 mathjax: true
 ---
 

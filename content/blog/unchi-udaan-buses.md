@@ -3,7 +3,7 @@ layout: blog
 title: ऊंची उड़ान के लिए बसें हैं जरूरी
 date: 2026-09-06T00:00:00.000Z
 categories:
-  - policy
+  - public-policy
   - musings
 lang: hi
 ---
